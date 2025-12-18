@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Sikrer korrekt visning på mobile enheder -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Må IKKE indekseres af søgemaskiner -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
+    <title>Forside</title>
+
+    <!-- Bootstrap CSS: bruges til grid, responsivitet og færdige UI-komponenter -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Inter font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Egen CSS: design og tilpasninger -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header: indeholder navigation og evt. hero-sektion -->
+    <header>
+
+        <!-- Hovednavigation -->
+        <nav class="navbar navbar-expand-lg fixed-top main-navbar" aria-label="Hovednavigation">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                </a>
+
+                <!-- Offcanvas-menu (mobil / tablet) -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+
+                    <!-- Header i offcanvas -->
+                    <div class="offcanvas-header">
+                        <a href="./index.html">
+                            <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                        </a>
+
+                        <!-- Luk-knap -->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Luk menu"></button>
+                    </div>
+
+                    <!-- Navigationens indhold -->
+                    <div class="offcanvas-body">
+
+                        <!-- Navigationsliste -->
+                        <ul class="navbar-nav justify-content-center flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./course.html">Stopforløb</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./facts.html">Fakta &amp; Viden</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./stories.html">Unge fortæller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Kontakt</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Call-to-action -->
+                <a href="./course.html" class="cta primary cta-navbar">Tilmeld</a>
+
+                <!-- Burger-menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Åbn menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Main: sidens primære indhold -->
+    <main id="main-content">
+
+        <!-- Hero-sektion -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Hero-tekst (1/3) -->
+                    <div class="col-lg-4">
+                        <h1 class="hero-title">Giv nikotinen et spark!</h1>
+
+                        <p class="subtitle hero-subtitle">Herning Kommune hjælper dig med dit nikotinstop på en måde, der passer til dig.</p>
+
+                        <div class="hero-actions">
+                            <a href="./course.html" class="cta primary">Tilmeld</a>
+                            <a href="./facts.html" class="cta secondary">Bliv klogere</a>
+                        </div>
+                    </div>
+
+                    <!-- Hero-illustration (2/3) -->
+                    <div class="col-lg-8">
+                        <img src="/images/hero.webp" alt="Illustration af ung person der sparker nikotinen væk">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion: Hvorfor stoppe -->
+        <section class="why-stop">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Hvorfor stoppe?</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Der er mange gode grunde til at blive røgfri. Her er nogle af de vigtigste fordele.
+                </p>
+
+                <!-- Illustration -->
+                <figure class="illustration">
+                    <img src="./images/hvorfor_stoppe.webp"
+                        alt="Illustration der viser fordele ved at stoppe med nikotin" loading="lazy">
+                </figure>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Sådan virker det -->
+        <section class="how-it-works">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Sådan virker det!</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Tre simple trin til at komme i gang med dit nikotinstop.
+                </p>
+
+                <!-- Trinliste (semantisk korrekt rækkefølge) -->
+                <ol class="how-it-works-steps">
+
+                    <!-- Trin 1 -->
+                    <li class="how-it-works-step">
+                        <h3 class="step-title">Tilmeld dig</h3>
+                        <figure class="step-illustration">
+                            <img src="./images/step1.webp" alt="Ung person der tilmelder sig via tablet" loading="lazy">
+                        </figure>
+                    </li>
+
+                    <!-- Trin 2 -->
+                    <li class="how-it-works-step">
+                        <h3 class="step-title">Få hjælp & støtte</h3>
+                        <figure class="step-illustration">
+                            <img src="./images/step2.webp" alt="Ung person der modtager støtte via mobil" loading="lazy">
+                        </figure>
+                    </li>
+
+                    <!-- Trin 3 -->
+                    <li class="how-it-works-step">
+                        <h3 class="step-title">Bliv nikotinfri</h3>
+                        <figure class="step-illustration">
+                            <img src="./images/step3.webp" alt="Ung person der er blevet røgfri" loading="lazy">
+                        </figure>
+                    </li>
+
+                </ol>
+
+                <!-- CTA under trin -->
+                <div class="how-it-works-action">
+                    <a href="./course.html" class="cta primary">Se dine muligheder</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Du er ikke alene -->
+        <section class="testimonials">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Du er ikke alene!</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Tusindvis af unge har taget springet - det kan du også
+                </p>
+
+                <!-- Indhold -->
+                <div class="row align-items-center mt-5 gx-5">
+
+                    <!-- Venstre kolonne: Citater -->
+                    <div class="col-12 col-md-6">
+
+                        <!-- Citatliste -->
+                        <ul class="testimonial-list">
+
+                            <li class="testimonial">
+                                <strong>Amina, 24 år</strong>
+                                <p>“Det var ikke nemt, men jeg fandt ud af, at jeg faktisk har mere kontrol end jeg
+                                    troede.”</p>
+                            </li>
+
+                            <li class="testimonial">
+                                <strong>Emil, 17 år</strong>
+                                <p>“Jeg troede ikke, jeg kunne klare det - men nu føles det som det bedste valg.”</p>
+                            </li>
+
+                            <li class="testimonial">
+                                <strong>Freja, 21 år</strong>
+                                <p>“Mine venner støttede mig hele vejen, og nu hjælper jeg andre.”</p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Højre kolonne: Illustration + CTA overlay -->
+                    <div class="col-12 col-md-6">
+
+                        <!-- Media wrapper (reference for overlay) -->
+                        <div class="testimonial-media">
+
+                            <!-- Illustration -->
+                            <figure class="testimonial-illustration">
+                                <img src="./images/testimonial.webp" alt="Illustration af ung der er blevet røgfri" loading="lazy">
+                            </figure>
+
+                            <!-- CTA-knapper (overlay på billedet) -->
+                            <div class="testimonial-actions">
+                                <a href="./course.html" class="cta primary cta-testimonial">Kom i gang</a>
+                                <a href="./stories.html" class="cta secondary cta-testimonial">Læs flere historier</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer: sekundært indhold -->
+    <footer>
+
+        <div class="container">
+
+            <!-- Øvre footer-indhold -->
+            <div class="row justify-content-between">
+
+                <!-- Kolonne 1: Logo + tekst -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <a href="./index.html" aria-label="Gå til forsiden">
+                        <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                    </a>
+                    <p>Hjælper unge med at blive røg- og nikotinfri gennem støtte, viden og fællesskab.</p>
+                </div>
+
+                <!-- Kolonne 2 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Navigation</h3>
+                    <p><a href="./course.html">Stopforløb</a></p>
+                    <p><a href="./facts.html">Fakta &amp; viden</a></p>
+                    <p><a href="./stories.html">Unge fortæller</a></p>
+                    <p><a href="./contact.html">Kontakt</a></p>
+                </div>
+
+                <!-- Kolonne 3 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Information</h3>
+                    <p><a href="./contact.html#faq-section">FAQ</a></p>
+                    <p><a href="./resources.html">Ressourcer</a></p>
+                    <p><a href="./index.html">Forside</a></p>
+                </div>
+
+                <!-- Kolonne 4 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Find os</h3>
+                    <p>Torvet 5, 7400 Herning</p>
+                    <p>CVR: 29189919</p>
+                    <p>
+                        Tlf: <a href="tel:96287530">+45 96 28 75 30</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Skillelinje -->
+            <hr class="my-4">
+
+            <!-- Nederste footer-indhold -->
+            <div class="row align-items-center">
+
+                <!-- Venstre side -->
+                <div class="col-12 col-md-6">
+                    <p class="mb-0">
+                        ©2025 Giv Nikotinen Et Spark. Alle rettigheder forbeholdes.
+                    </p>
+                </div>
+
+                <!-- Højre side -->
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="https://www.herning.dk/om-kommunen/digitalisering-og-databeskyttelse/personoplysninger"
+                            target="_blank" rel="noopener noreferrer">
+                            Privatlivspolitik
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="https://www.herning.dk/cookies" target="_blank" rel="noopener noreferrer">
+                            Cookiepolitik
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Popper.js bruges af Bootstrap til dropdowns, tooltips osv. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap’s JavaScript som styrer fx navbar og offcanvas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

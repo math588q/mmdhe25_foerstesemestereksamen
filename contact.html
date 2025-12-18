@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Sikrer korrekt visning på mobile enheder -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Må IKKE indekseres af søgemaskiner -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
+    <title>Kontakt</title>
+
+    <!-- Bootstrap CSS: bruges til grid, responsivitet og færdige UI-komponenter -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Inter font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Egen CSS: design og tilpasninger -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header: indeholder navigation og evt. hero-sektion -->
+    <header>
+
+        <!-- Hovednavigation -->
+        <nav class="navbar navbar-expand-lg fixed-top main-navbar" aria-label="Hovednavigation">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                </a>
+
+                <!-- Offcanvas-menu (mobil / tablet) -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+
+                    <!-- Header i offcanvas -->
+                    <div class="offcanvas-header">
+                        <a href="./index.html">
+                            <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                        </a>
+
+                        <!-- Luk-knap -->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Luk menu"></button>
+                    </div>
+
+                    <!-- Navigationens indhold -->
+                    <div class="offcanvas-body">
+
+                        <!-- Navigationsliste -->
+                        <ul class="navbar-nav justify-content-center flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./course.html">Stopforløb</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./facts.html">Fakta &amp; Viden</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./stories.html">Unge fortæller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./contact.html">Kontakt</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Call-to-action -->
+                <a href="./course.html" class="cta primary cta-navbar">Tilmeld</a>
+
+                <!-- Burger-menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Åbn menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Main: sidens primære indhold -->
+    <main id="main-content">
+
+        <!-- Sideintro / page header -->
+        <div class="page-header">
+            <h1 class="page-title">Kontakt os</h1>
+            <p class="page-subtitle">
+                Har du brug for hjælp eller har du spørgsmål? Vi er her for at støtte dig på din rejse til et
+                nikotinfrit liv. Tag kontakt til Ungevejledningen hvis du er 15-25 år.
+            </p>
+        </div>
+
+        <!-- Sektion: Kontaktinformation -->
+        <section class="contact-info">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Kontaktinformation</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Du er altid velkommen til at kontakte Ungevejledningen, hvis du har spørgsmål
+                    eller har brug for støtte.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Venstre kolonne: Telefon + Email (samlet) -->
+                    <div class="col-12 col-lg-6">
+
+                        <div class="contact-card contact-card--stacked">
+
+                            <!-- Telefon -->
+                            <div class="contact-block">
+                                <div class="contact-card-header">
+                                    <i class="bi bi-telephone"></i>
+                                    <h3>Telefon - Ungevejledningen</h3>
+                                </div>
+
+                                <p class="contact-main">
+                                    Tlf: <a href="tel:96287530">96 28 75 30</a>
+                                </p>
+
+                                <p class="contact-sub">
+                                    Ring og få hjælp til at komme i gang
+                                </p>
+                            </div>
+
+                            <div class="contact-divider"></div>
+
+                            <!-- Email -->
+                            <div class="contact-block">
+                                <div class="contact-card-header">
+                                    <i class="bi bi-envelope"></i>
+                                    <h3>Email</h3>
+                                </div>
+
+                                <p class="contact-main">
+                                    <a href="mailto:sikkerpostuv@herning.dk">
+                                        sikkerpostuv@herning.dk
+                                    </a>
+                                </p>
+
+                                <p class="contact-sub">
+                                    Send os en besked, vi svarer hurtigst muligt
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Højre kolonne: Åbningstider -->
+                    <div class="col-12 col-lg-6">
+
+                        <div class="contact-card">
+                            <div class="contact-card-header">
+                                <i class="bi bi-clock"></i>
+                                <h3>Telefontider - Ungevejledningen</h3>
+                            </div>
+
+                            <div class="opening-hours">
+                                <div class="opening-row">
+                                    <span>Mandag</span>
+                                    <span>11.00 - 14.00</span>
+                                </div>
+                                <div class="opening-row">
+                                    <span>Tirsdag</span>
+                                    <span>11.00 - 14.00</span>
+                                </div>
+                                <div class="opening-row">
+                                    <span>Onsdag</span>
+                                    <span>11.00 - 14.00</span>
+                                </div>
+                                <div class="opening-row">
+                                    <span>Torsdag</span>
+                                    <span>13.00 - 16.30</span>
+                                </div>
+                                <div class="opening-row">
+                                    <span>Fredag</span>
+                                    <span>10.00 - 13.00</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Send os en besked -->
+        <section class="contact-form">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Send os en besked</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Har du spørgsmål eller brug for støtte, kan du skrive direkte til os her.
+                </p>
+
+                <div class="form-wrapper">
+
+                    <form>
+
+                        <div class="form-group">
+                            <label for="name">Navn</label>
+                            <input type="text" id="name" placeholder="Dit navn">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="din@email.dk">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" placeholder="Dit telefonnummer">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Besked</label>
+                            <textarea id="message" rows="5" placeholder="Skriv din besked her"></textarea>
+                        </div>
+
+                        <!-- CTA som link -->
+                        <a href="#contact-success" class="cta primary">
+                            Send besked
+                        </a>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Oftest stillede spørgsmål -->
+        <section class="faq" id="faq-section">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Oftest stillede spørgsmål</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Find svar på de mest almindelige spørgsmål om at stoppe med nikotinstop.
+                    Har du andre spørgsmål? Kontakt os gerne!
+                </p>
+
+                <div class="accordion faq-accordion" id="faqAccordion">
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                Hvordan stopper jeg?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Der findes flere måder at stoppe på.
+                                Det vigtigste er at finde den metode, der passer til dig.
+                                Kontakt Ungevejledningen for personlig rådgivning.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                Hvor lang tid tager det at blive røgfri?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Det er meget individuelt, hvor lang tid det tager.
+                                Nogle oplever forbedringer allerede efter få dage,
+                                mens andre har brug for længere tid.
+                                Det vigtigste er at være tålmodig med sig selv.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                Hvad er de almindeligste abstinenssymptomer?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Almindelige abstinenssymptomer kan være irritabilitet,
+                                rastløshed, koncentrationsbesvær og øget sult.
+                                Symptomerne er normale og vil aftage med tiden.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                Vil jeg tage på i vægt, når jeg stopper?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nogle oplever en mindre vægtforøgelse,
+                                men dette kan ofte forebygges med sund kost og motion.
+                                Vi kan hjælpe dig med råd og vejledning.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                Hjælper nikotinerstatning og stopforløb?
+                            </button>
+                        </h3>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Ja. Nikotinerstatning som plaster, tyggegummi eller inhalatorer
+                                kan reducere abstinenssymptomer.
+                                Stopforløb giver samtidig struktureret støtte.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6">
+                                Hvad gør jeg, hvis jeg starter igen?
+                            </button>
+                        </h3>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Tilbagefald er normalt og en del af processen.
+                                Det vigtigste er ikke at give op,
+                                men at lære af oplevelsen og prøve igen.
+                                Kontakt os for støtte.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq7">
+                                Hvordan håndterer jeg socialt pres?
+                            </button>
+                        </h3>
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Fortæl dine venner og familie om din beslutning.
+                                Øv dig i at sige nej, og find aktiviteter,
+                                der ikke involverer rygning.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq8">
+                                Er e-cigaretter et godt alternativ?
+                            </button>
+                        </h3>
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                E-cigaretter kan være et skridt på vejen,
+                                men målet bør være at blive helt fri for nikotin.
+                                Tal med os om, hvad der er den bedste løsning for dig.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="cta-box-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-box-inner">
+
+                        <div class="cta-box-icon">
+                            <i class="bi bi-arrow-right-circle"></i>
+                        </div>
+
+                        <h2 class="cta-box-title">
+                            Klar til at tage det første skridt?
+                        </h2>
+
+                        <p class="cta-box-text">
+                            Vi er her for at hjælpe dig gennem hele processen.
+                            Tilmeld dig vores stopforløb i dag!
+                        </p>
+
+                        <a href="./course.html" class="cta primary">
+                            Tilmeld dig nu
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer: sekundært indhold -->
+    <footer>
+
+        <div class="container">
+
+            <!-- Øvre footer-indhold -->
+            <div class="row justify-content-between">
+
+                <!-- Kolonne 1: Logo + tekst -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <a href="./index.html" aria-label="Gå til forsiden">
+                        <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                    </a>
+                    <p>Hjælper unge med at blive røg- og nikotinfri gennem støtte, viden og fællesskab.</p>
+                </div>
+
+                <!-- Kolonne 2 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Navigation</h3>
+                    <p><a href="./course.html">Stopforløb</a></p>
+                    <p><a href="./facts.html">Fakta &amp; viden</a></p>
+                    <p><a href="./stories.html">Unge fortæller</a></p>
+                    <p><a href="./contact.html">Kontakt</a></p>
+                </div>
+
+                <!-- Kolonne 3 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Information</h3>
+                    <p><a href="./contact.html#faq-section">FAQ</a></p>
+                    <p><a href="./resources.html">Ressourcer</a></p>
+                    <p><a href="./index.html">Forside</a></p>
+                </div>
+
+                <!-- Kolonne 4 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Find os</h3>
+                    <p>Torvet 5, 7400 Herning</p>
+                    <p>CVR: 29189919</p>
+                    <p>
+                        Tlf: <a href="tel:96287530">+45 96 28 75 30</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Skillelinje -->
+            <hr class="my-4">
+
+            <!-- Nederste footer-indhold -->
+            <div class="row align-items-center">
+
+                <!-- Venstre side -->
+                <div class="col-12 col-md-6">
+                    <p class="mb-0">
+                        ©2025 Giv Nikotinen Et Spark. Alle rettigheder forbeholdes.
+                    </p>
+                </div>
+
+                <!-- Højre side -->
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="https://www.herning.dk/om-kommunen/digitalisering-og-databeskyttelse/personoplysninger"
+                            target="_blank" rel="noopener noreferrer">
+                            Privatlivspolitik
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="https://www.herning.dk/cookies" target="_blank" rel="noopener noreferrer">
+                            Cookiepolitik
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- POPUP: Kontakt - Bekræftelse -->
+    <div id="contact-success" class="popup-overlay">
+
+        <!-- Klik udenfor lukker -->
+        <a href="#" class="popup-backdrop"></a>
+
+        <div class="popup-box popup-confirmation">
+
+            <!-- Luk-knap -->
+            <a href="#" class="popup-close">&times;</a>
+
+            <div class="popup-content center">
+
+                <h3>Tak for din henvendelse</h3>
+
+                <p>
+                    Vi har modtaget din besked og vil besvare den
+                    hurtigst muligt.
+                </p>
+
+                <a href="#" class="cta primary">
+                    Luk
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Popper.js bruges af Bootstrap til dropdowns, tooltips osv. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap’s JavaScript som styrer fx navbar og offcanvas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

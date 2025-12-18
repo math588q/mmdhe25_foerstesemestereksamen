@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Sikrer korrekt visning på mobile enheder -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Må IKKE indekseres af søgemaskiner -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
+    <title>Stopforløb</title>
+
+    <!-- Bootstrap CSS: bruges til grid, responsivitet og færdige UI-komponenter -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Inter font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Egen CSS: design og tilpasninger -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header: indeholder navigation og evt. hero-sektion -->
+    <header>
+
+        <!-- Hovednavigation -->
+        <nav class="navbar navbar-expand-lg fixed-top main-navbar" aria-label="Hovednavigation">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                </a>
+
+                <!-- Offcanvas-menu (mobil / tablet) -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+
+                    <!-- Header i offcanvas -->
+                    <div class="offcanvas-header">
+                        <a href="./index.html">
+                            <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                        </a>
+
+                        <!-- Luk-knap -->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Luk menu"></button>
+                    </div>
+
+                    <!-- Navigationens indhold -->
+                    <div class="offcanvas-body">
+
+                        <!-- Navigationsliste -->
+                        <ul class="navbar-nav justify-content-center flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./course.html">Stopforløb</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./facts.html">Fakta &amp; Viden</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./stories.html">Unge fortæller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Kontakt</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Call-to-action -->
+                <a href="./course.html" class="cta primary cta-navbar">Tilmeld</a>
+
+                <!-- Burger-menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Åbn menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Main: sidens primære indhold -->
+    <main id="main-content">
+
+        <!-- Sideintro / page header -->
+        <div class="page-header">
+            <h1 class="page-title">Find det perfekte forløb for dig</h1>
+            <p class="page-subtitle">
+                Vi tilbyder forskellige måder at stoppe på - vælg det der passer bedst til dig og din livsstil. Alle
+                forløb er helt gratis.
+            </p>
+        </div>
+
+        <!-- Sektion: Overblik for stopforløb -->
+
+        <section class="course-overview">
+            <h2 class="visually-hidden">Overblik over stopforløb</h2> <!--skjult h2 overskrift pga. warning-->
+
+            <!-- Bootstrap container -->
+            <div class="container">
+
+                <!-- Bootstrap grid row med spacing -->
+                <div class="row g-4">
+
+                    <!-- Gruppeforløb -->
+                    <article class="col-md-6">
+
+                        <!-- Forløbskort -->
+                        <div class="overview-card">
+
+                            <!-- Forløbsillustration -->
+                            <figure class="overview-image-wrapper">
+                                <img src="./images/group.webp" alt="Gruppeforløb" loading="lazy" class="overview-image">
+                            </figure>
+
+                            <!-- Forløbsindhold -->
+                            <div class="overview-content">
+
+                                <!-- Forløbstitel -->
+                                <h3>Gruppeforløb</h3>
+
+                                <!-- Fakta om forløbet -->
+                                <ul class="overview-facts">
+                                    <li>
+                                        <i class="bi bi-calendar"></i>
+                                        <span>5-8 møder</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-clock"></i>
+                                        <span>1-2 timer</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Kort beskrivelse -->
+                                <p>
+                                    Et trygt fællesskab hvor du stopper sammen med andre unge.
+                                    I får støtte, motivation og konkrete værktøjer til at komme
+                                    ud af nikotinen - sammen.
+                                </p>
+
+                                <!-- Call to actions -->
+                                <div class="overview-actions">
+                                    <a href="#signup-group" class="cta primary">Tilmeld</a>
+                                    <a href="#group-course" class="cta secondary">Læs mere</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- Individuelt forløb -->
+                    <article class="col-md-6">
+
+                        <!-- Forløbskort -->
+                        <div class="overview-card">
+
+                            <!-- Forløbsillustration -->
+                            <figure class="overview-image-wrapper">
+                                <img src="./images/individual.webp" alt="Individuelt forløb" loading="lazy"
+                                    class="overview-image">
+                            </figure>
+
+                            <!-- Forløbsindhold -->
+                            <div class="overview-content">
+
+                                <!-- Forløbstitel -->
+                                <h3>Individuelt forløb</h3>
+
+                                <!-- Fakta om forløbet -->
+                                <ul class="overview-facts">
+                                    <li>
+                                        <i class="bi bi-calendar"></i>
+                                        <span>5 møder</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-clock"></i>
+                                        <span>30-60 min</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Kort beskrivelse -->
+                                <p>
+                                    Personlig hjælp én-til-én, helt tilpasset dig og dine vaner.
+                                    Du får en fast rådgiver, som følger dig gennem hele dit stop.
+                                </p>
+
+                                <!-- Call to actions -->
+                                <div class="overview-actions">
+                                    <a href="#signup-individual" class="cta primary">Tilmeld</a>
+                                    <a href="#individual-course" class="cta secondary">Læs mere</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Callout: Vidste du? -->
+        <section class="course-callout">
+            <div class="container">
+                <div class="callout-box">
+
+                    <div class="callout-header">
+                        <i class="bi bi-exclamation-circle"></i>
+                        <h3>Vidste du?</h3>
+                    </div>
+
+                    <p class="callout-text">
+                        Som en ekstra mulighed kan du få <strong>gratis nikotinstopmedicin i op til fire uger</strong>,
+                        når du deltager i et nikotinstoptilbud.
+                    </p>
+
+                    <p class="callout-subtext">
+                        Chancen for at blive røgfri er op til dobbelt så stor, hvis du både får rådgivning og
+                        nikotinstopmedicin.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion: Gruppeforløb -->
+        <section class="course-detail" id="group-course">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Gruppeforløb</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Et nikotinstopforløb i fællesskab med andre unge - hvor I hjælper hinanden med at blive røgfri.
+                </p>
+
+                <!-- RÆKKE 1: Illustration -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <figure class="detail-hero">
+                            <img src="./images/group.webp" alt="Illustration af gruppeforløb hvor unge støtter hinanden"
+                                loading="lazy">
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- RÆKKE 2: Sådan foregår det (venstre) + Hvorfor (højre) -->
+                <div class="row mt-5 gx-5">
+
+                    <!-- Sådan foregår det -->
+                    <div class="col-md-7 mb-4 mb-md-0">
+                        <h3>Sådan foregår det</h3>
+
+                        <ul class="detail-list">
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Vi taler om dine nikotinvaner og triggere, så du lærer at forstå, hvad der udløser din
+                                brug.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Vi hjælper dig med at lave en personlig stopplan, der passer til din hverdag og dine
+                                udfordringer.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Du får redskaber til at håndtere nikotintrang, fx vejrtrækning, vane-skift og konkrete
+                                metoder.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Vi træner strategier til svære situationer som fester, pauser og venner, der bruger
+                                nikotin.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Du får støtte fra gruppen og deler erfaringer med andre, der står i samme situation.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hvorfor gruppeforløb -->
+                    <div class="col-md-5">
+                        <h3>Hvorfor gruppeforløb?</h3>
+
+                        <p>
+                            Fordi det kan være lettere at holde motivationen oppe, når man ikke står alene.
+                            I gruppen deler I erfaringer, udfordringer og strategier - og støtter hinanden
+                            gennem de første svære dage.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- RÆKKE 3: Fakta + CTA + tip samlet -->
+                <div class="row mt-5">
+                    <div class="col-12">
+
+                        <div class="detail-decision">
+
+                            <div class="detail-decision-top">
+                                <!-- Fakta -->
+                                <ul class="detail-facts">
+                                    <li>
+                                        <i class="bi bi-calendar"></i>
+                                        <strong>5-8 møder</strong>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-clock"></i>
+                                        <strong>1-2 timer pr. møde</strong>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-people"></i>
+                                        <strong>4-12 deltagere</strong>
+                                    </li>
+                                </ul>
+
+                                <!-- CTA -->
+                                <a href="#signup-group" class="cta primary">Tilmeld dig</a>
+
+                            </div>
+
+                            <!-- Tip -->
+                            <p class="detail-note">
+                                <i class="bi bi-lightbulb"></i>
+                                Gruppeforløb er især godt, hvis du har venner eller kammerater,
+                                der også overvejer at stoppe.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Sektion: Individuelt forløb -->
+        <section class="course-detail" id="individual-course">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Individuelt forløb</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Et nikotinstopforløb skræddersyet til dig - hvor du i dit eget tempo får støtte til at blive røgfri.
+                </p>
+
+                <!-- RÆKKE 1: Illustration -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <figure class="detail-hero">
+                            <img src="./images/individual.webp"
+                                alt="Illustration der viser fordele ved at stoppe med nikotin" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- RÆKKE 2: Sådan foregår det (venstre) + Hvorfor (højre) -->
+                <div class="row mt-5 gx-5">
+
+                    <!-- Sådan foregår det -->
+                    <div class="col-md-7 mb-4 mb-md-0">
+                        <h3>Sådan foregår det</h3>
+
+                        <ul class="detail-list">
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Vi kortlægger dine nikotinvaner, så du forstår dine triggere og hvornår trangen opstår.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Du får en personlig stopplan, der passer til din hverdag og dine mål.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Du får redskaber til at håndtere nikotintrang, fx vane-skift og simple teknikker.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Vi træner strategier til svære situationer som fester, pauser og venner, der bruger
+                                nikotin.
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Du bliver fulgt tæt, så planen kan justeres, og du får støtte undervejs.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hvorfor individuelt -->
+                    <div class="col-md-5">
+                        <h3>Hvorfor individuelt forløb?</h3>
+
+                        <p>
+                            Det individuelle forløb er en god løsning, hvis du ønsker fleksibilitet, gerne vil arbejde
+                            med dine vaner alene, eller har brug for personlig støtte, der tager højde for din hverdag.
+                            Sammen med en rådgiver finder I ud af, hvad der virker for dig - både i forhold til
+                            motivation, vaner og udfordringer.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- RÆKKE 3: Fakta + CTA + tip samlet -->
+                <div class="row mt-5">
+                    <div class="col-12">
+
+                        <div class="detail-decision">
+
+                            <div class="detail-decision-top">
+                                <!-- Fakta -->
+                                <ul class="detail-facts">
+                                    <li>
+                                        <i class="bi bi-calendar"></i>
+                                        <strong>Typisk 5 møder</strong>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-clock"></i>
+                                        <strong>30-60 min pr. møde</strong>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-people"></i>
+                                        <strong>Dig og 1 rådgiver</strong>
+                                    </li>
+                                </ul>
+
+                                <!-- CTA -->
+                                <a href="#signup-individual" class="cta primary">Tilmeld dig</a>
+
+                            </div>
+
+                            <!-- Tip -->
+                            <p class="detail-note">
+                                <i class="bi bi-lightbulb"></i>
+                                Individuelt forløb er oplagt, hvis du tidligere har forsøgt at stoppe uden held - og
+                                gerne vil have professionel og målrettet støtte denne gang.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer: sekundært indhold -->
+    <footer>
+
+        <div class="container">
+
+            <!-- Øvre footer-indhold -->
+            <div class="row justify-content-between">
+
+                <!-- Kolonne 1: Logo + tekst -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <a href="./index.html" aria-label="Gå til forsiden">
+                        <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                    </a>
+                    <p>Hjælper unge med at blive røg- og nikotinfri gennem støtte, viden og fællesskab.</p>
+                </div>
+
+                <!-- Kolonne 2 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Navigation</h3>
+                    <p><a href="./course.html">Stopforløb</a></p>
+                    <p><a href="./facts.html">Fakta &amp; viden</a></p>
+                    <p><a href="./stories.html">Unge fortæller</a></p>
+                    <p><a href="./contact.html">Kontakt</a></p>
+                </div>
+
+                <!-- Kolonne 3 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Information</h3>
+                    <p><a href="./contact.html#faq-section">FAQ</a></p>
+                    <p><a href="./resources.html">Ressourcer</a></p>
+                    <p><a href="./index.html">Forside</a></p>
+                </div>
+
+                <!-- Kolonne 4 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Find os</h3>
+                    <p>Torvet 5, 7400 Herning</p>
+                    <p>CVR: 29189919</p>
+                    <p>
+                        Tlf: <a href="tel:96287530">+45 96 28 75 30</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Skillelinje -->
+            <hr class="my-4">
+
+            <!-- Nederste footer-indhold -->
+            <div class="row align-items-center">
+
+                <!-- Venstre side -->
+                <div class="col-12 col-md-6">
+                    <p class="mb-0">
+                        ©2025 Giv Nikotinen Et Spark. Alle rettigheder forbeholdes.
+                    </p>
+                </div>
+
+                <!-- Højre side -->
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="https://www.herning.dk/om-kommunen/digitalisering-og-databeskyttelse/personoplysninger"
+                            target="_blank" rel="noopener noreferrer">
+                            Privatlivspolitik
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="https://www.herning.dk/cookies" target="_blank" rel="noopener noreferrer">
+                            Cookiepolitik
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- POPUP: Gruppeforløb -->
+    <div id="signup-group" class="popup-overlay">
+
+        <!-- Klik udenfor = luk -->
+        <a href="#" class="popup-backdrop"></a>
+
+        <div class="popup-box">
+
+            <!-- Luk-knap -->
+            <a href="#" class="popup-close">&times;</a>
+
+            <!-- Indhold -->
+            <div class="popup-content">
+                <h3>Tilmeld dig - Gruppeforløb</h3>
+
+                <p>
+                    Udfyld dine oplysninger herunder, så kontakter vi dig
+                    med information om næste gruppeforløb.
+                </p>
+
+                <form class="popup-form">
+                    <label>
+                        Navn
+                        <input type="text" required>
+                    </label>
+
+                    <label>
+                        Telefon
+                        <input type="tel" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" required>
+                    </label>
+
+                    <a href="#signup-success" class="cta primary full-width">
+                        Indsend tilmelding
+                    </a>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- POPUP: Individuelt forløb -->
+    <div id="signup-individual" class="popup-overlay">
+
+        <a href="#" class="popup-backdrop"></a>
+
+        <div class="popup-box">
+
+            <a href="#" class="popup-close">&times;</a>
+
+            <div class="popup-content">
+                <h3>Tilmeld dig - Individuelt forløb</h3>
+
+                <p>
+                    Udfyld dine oplysninger herunder, så kontakter vi dig
+                    med information om forløbet.
+                </p>
+
+                <form class="popup-form">
+                    <label>
+                        Navn
+                        <input type="text" required>
+                    </label>
+
+                    <label>
+                        Telefon
+                        <input type="tel" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" required>
+                    </label>
+
+                    <a href="#signup-success" class="cta primary full-width">
+                        Indsend tilmelding
+                    </a>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- POPUP: Bekræftelse -->
+    <div id="signup-success" class="popup-overlay">
+
+        <!-- Klik udenfor lukker -->
+        <a href="#" class="popup-backdrop"></a>
+
+        <div class="popup-box popup-confirmation">
+
+            <!-- Luk-knap -->
+            <a href="#" class="popup-close">&times;</a>
+
+            <div class="popup-content center">
+
+                <h3>Tak for din tilmelding 🎉</h3>
+
+                <p>
+                    Vi har modtaget din tilmelding.
+                    Du vil snarest modtage en bekræftelse på mail
+                    med yderligere information.
+                </p>
+
+                <a href="#" class="cta primary">
+                    Luk
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Popper.js bruges af Bootstrap til dropdowns, tooltips osv. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap’s JavaScript som styrer fx navbar og offcanvas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

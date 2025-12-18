@@ -1,0 +1,1277 @@
+@import url("./buttons.css");
+@import url("./navbar.css");
+@import url("./footer.css");
+@import url("./popups.css");
+
+/* CSS-variabler */
+:root {
+
+    /* Farver */
+    --color-primary: #FF914D;            /* Primær accentfarve (CTA og aktive elementer) */
+    --color-background: #FDF3E8;         /* Overordnet baggrundsfarve */
+    --color-navbar: #E6DDCC;             /* Baggrundsfarve til navigation */
+
+    --color-title: #1f1f1f;              /* Farve til overskrifter */
+    --color-subtitle: #3d3d3d;           /* Farve til undertitler */
+    --color-text: #222222;               /* Farve til brødtekst */
+
+    /* Typografi - skrifttype */
+    --font-family-base: 'Inter', sans-serif; /* Primær skrifttype */
+
+    /* Typografi - font weights */
+    --font-weight-regular: 400;          /* Inter Regular */
+    --font-weight-medium: 500;           /* Inter Medium */
+    --font-weight-semibold: 600;         /* Inter SemiBold */
+    --font-weight-bold: 700;             /* Inter Bold */
+
+    /* Typografi - font sizes */
+    --font-size-h1: 48px;                /* H1 - hovedoverskrift på undersider */
+    --font-size-h2: 36px;                /* H2 - sektionstitler */
+    --font-size-subtitle: 24px;          /* Undertitler */
+    --font-size-cardtitle: 18px;         /* Titler i cards */
+
+    --font-size-navbar: 16px;            /* Tekststørrelse i navigation */
+    --font-size-text: 16px;              /* Standard brødtekst */
+}
+
+/* Basis - globale typografi- og farveindstillinger */
+body {
+    background-color: var(--color-background); /* Overordnet sidebaggrund */
+    font-family: var(--font-family-base);      /* Global skrifttype */
+    font-size: var(--font-size-text);          /* Standard brødtekststørrelse */
+    line-height: 1.6;                          /* God læsbarhed */
+    color: var(--color-text);                  /* Standard tekstfarve */
+}
+
+/* ============================================
+    Globaltt
+   ============================================ */
+
+/* Sektion - titel */
+.section-title {
+    font-size: var(--font-size-h2);            /* Sektionstitel (H2) */
+    font-weight: var(--font-weight-semibold);  /* Semi-bold for tydelighed */
+    line-height: 1.2;                          /* Kompakt, men læsbar linjeafstand */
+    color: var(--color-title);                 /* Titel-farve */
+    margin-bottom: 16px;                       /* Luft til undertitel */
+    text-align: center;                        /* Centrerer titlen horisontalt */
+}
+
+/* Sektion - undertitel */
+.section-subtitle {
+    font-size: var(--font-size-subtitle);      /* Undertitel-størrelse */
+    font-weight: var(--font-weight-regular);   /* Normal tekstvægt */
+    line-height: 1.5;                          /* Behagelig læsning */
+    color: var(--color-subtitle);              /* Undertitel-farve */
+    margin-bottom: 40px;                       /* Luft til efterfølgende indhold */
+    text-align: center;                        /* Centrerer undertitlen */
+}
+
+/* Sektion - standard afstand */
+section {
+    padding: 120px 20px;                       /* Ens luft over og under sektioner */
+}
+
+/* Sektion - mobil og tablet */
+@media (max-width: 576px) {
+    section {
+        padding: 80px 12px;                    /* Mindre afstand på små skærme */
+    }
+}
+
+/* Undersider - sideheader */
+.page-header {
+    text-align: center;                        /* Centrerer titel og undertitel */
+    margin: 160px 20px 72px;                   /* Luft over og under sideheader */
+}
+
+/* Undersider - H1 titel */
+.page-title {
+    font-size: var(--font-size-h1);            /* Primær sidetitel */
+    font-weight: var(--font-weight-bold);      /* Bold for tydelig hierarki */
+    color: var(--color-title);                 /* Titel-farve */
+    margin-bottom: 16px;                       /* Luft til undertitel */
+}
+
+/* Undersider - undertitel */
+.page-subtitle {
+    font-size: var(--font-size-subtitle);      /* Undertitel-størrelse */
+    font-weight: var(--font-weight-medium);    /* Medium vægt */
+    color: var(--color-subtitle);              /* Undertitel-farve */
+    max-width: 720px;                          /* Begrænser linjelængde */
+    margin: 0 auto;                            /* Centrerer teksten horisontalt */
+}
+
+/* Undersider - mobiltilpasning */
+@media (max-width: 576px) {
+    .page-header {
+        margin: 120px 12px 50px;               /* Justeret luft på små skærme */
+    }
+
+    .page-title {
+        font-size: 36px;                       /* Skaleret H1 på mobil */
+    }
+
+    .page-subtitle {
+        font-size: 20px;                       /* Skaleret undertitel på mobil */
+    }
+}
+
+/* ============================================
+    Forside
+   ============================================ */
+
+/* Hero - whitespace */
+.hero {
+    padding-top: 160px;                  /* Ekstra luft pga. fixed navbar */
+    padding-bottom: 120px;               /* Matcher øvrige sektioner */
+}
+
+/* Hero - overskrift */
+.hero-title {
+    font-size: 72px;                     /* Stor forside-overskrift */
+    font-weight: var(--font-weight-bold);/* Skrift vægt */
+    line-height: 1.1;                    /* Tæt linjeafstand for markant udtryk */
+    margin-bottom: 24px;                 /* Afstand til undertitel */
+}
+
+/* Hero - undertitel */
+.hero-subtitle {
+    font-size: var(--font-size-subtitle);/* Undertitel-størrelse */
+    font-weight: var(--font-weight-medium); /* Skrift vægt */
+    line-height: 1.5;                    /* God læsbarhed */
+    max-width: 520px;                    /* Begrænser linjelængde */
+    margin: 0 auto 48px;                 /* Centrerer og skaber afstand til illustration */
+}
+
+/* Hero - CTA'er */
+.hero-actions {
+    display: flex;                       /* Placerer CTA’er horisontalt */
+    gap: 16px;                           /* Afstand mellem knapper */
+    flex-wrap: wrap;                     /* Tillader linjeskift på små skærme */
+}
+
+/* Hero - illustration */
+.hero img {
+    max-width: 100%;                     /* Holder billedet inden for kolonnen */
+    height: auto;                        /* Bevarer billedets proportioner */
+    display: block;                      /* Fjerner inline whitespace */
+}
+
+/* Hero - tablet og ned */
+@media (max-width: 992px) {
+
+    .hero-title {
+        font-size: 56px;                 /* Mindre overskrift på tablet */
+    }
+
+    .hero-subtitle {
+        font-size: 20px;                 /* Mere kompakt undertitel */
+    }
+
+    .hero img {
+        margin-top: 20px;                /* Luft mellem CTA’er og illustration */
+    }
+}
+
+/* Hero - mobil */
+@media (max-width: 576px) {
+
+    .hero {
+        padding-top: 120px;              /* Mindre top-padding */
+        padding-bottom: 80px;             /* Mindre bund-padding */
+    }
+
+    .hero-title {
+        font-size: 40px;                 /* Mobilvenlig overskrift */
+    }
+
+    .hero-subtitle {
+        font-size: 18px;                 /* Lettere læsbar undertitel */
+    }
+
+    .hero img {
+        margin-top: 20px;                /* Ekstra luft over illustration */
+    }
+}
+
+/* Hvorfor stoppe - illustration */
+.why-stop .illustration img {
+    max-width: 100%;                     /* Sikrer at billedet ikke overskrider containerens bredde */
+    height: auto;                        /* Bevarer billedets proportioner ved skalering */
+    display: block;                      /* Fjerner inline whitespace under billedet */
+    margin: 0 auto;                      /* Centrerer billedet horisontalt */
+}
+
+/* Sådan virker det - trin liste */
+.how-it-works-steps {
+    display: grid;                        /* Aktiverer CSS Grid layout */
+    grid-template-columns: repeat(3, 1fr);/* Tre lige kolonner | inspireret af ChatGPT*/
+    gap: 48px;                            /* Afstand mellem trinene */
+    margin-top: 64px;                     /* Luft mellem undertitel og trin */
+    list-style: none;                     /* Fjerner standard nummerering */
+    padding: 0;                           /* Fjerner standard padding */
+    justify-items: center;                /* Centrerer hvert trin i kolonnen */
+}
+
+/* Sådan virker det - enkelt trin */
+.how-it-works-step {
+    position: relative;                   /* Reference for pil-element */
+    text-align: center;                   /* Centrerer trinets indhold */
+}
+
+/* Sådan virker det - trin titel */
+.step-title {
+    font-size: var(--font-size-cardtitle);  /* Skriftstørrelse på trin-titel */
+    font-weight: var(--font-weight-semibold); /* Semi-bold tekst */
+    color: var(--color-title);            /* Titel-farve */
+    margin-bottom: 16px;                  /* Luft mellem titel og illustration */
+}
+
+/* Sådan virker det - illustration */
+.step-illustration img {
+    display: block;                       /* Fjerner inline whitespace */
+    max-width: 100%;                      /* Gør billedet responsivt */
+    height: auto;                         /* Bevarer billedets proportioner */
+}
+
+/* Sådan virker det - pil mellem trin (desktop) */
+.how-it-works-step:not(:last-child)::after {
+    content: '';                          /* Opretter pseudo-element */
+    position: absolute;                   /* Positioneres relativt til trin */
+    top: 50%;                             /* Centrerer pilen lodret */
+    right: -32px;                         /* Placerer pilen mellem trinene */
+    width: 20px;                          /* Pilens bredde */
+    height: 20px;                         /* Pilens højde */
+    border-top: 4px solid var(--color-primary); /* Øverste del af pil */
+    border-right: 4px solid var(--color-primary); /* Højre del af pil */
+    transform: translateY(-50%) rotate(45deg); /* Roterer pilen mod højre | inspireret af ChatGPT*/
+}
+
+/* Sådan virker det - CTA */
+.how-it-works-action {
+    margin-top: 64px;                     /* Luft mellem trin og CTA */
+    text-align: center;                   /* Centrerer CTA */
+}
+
+/* Breakpoint - tablet og mobil */
+@media (max-width: 768px) {
+
+    /*trin liste */
+    .how-it-works-steps {
+        grid-template-columns: 1fr;       /* Ét trin pr. række | inspireret af ChatGPT*/
+        gap: 64px;                        /* Mere luft mellem trinene */
+    }
+
+    /*illustration */
+    .step-illustration img {
+        max-width: 75%;                   /* Smallere end container */
+        margin: 0 auto;                   /* Centrerer billedet */
+    }
+
+    /*pil mellem trin */
+    .how-it-works-step:not(:last-child)::after {
+        top: auto;                        /* Fjerner lodret centrering */
+        right: 50%;                       /* Centrerer horisontalt */
+        bottom: -40px;                    /* Placerer pilen under trinnet */
+        transform: translateX(50%) rotate(135deg); /* Roterer pilen nedad  | inspireret af ChatGPT */
+    }
+}
+
+/* Testimonials - citatliste */
+.testimonial-list {
+    list-style: none;                     /* Fjerner standard bullets */
+    padding: 0;                           /* Fjerner standard padding */
+    margin: 0;                            /* Fjerner standard margin */
+}
+
+/* Testimonials - enkelt citat */
+.testimonial {
+    background-color: rgba(230, 221, 204, 0.5); /* 50% af navbarens farve */
+    padding: 16px 20px;                   /* Indvendig luft */
+    margin-bottom: 30px;                  /* Afstand mellem citater */
+    text-align: left;                     /* Venstrestiller tekst */
+    border-left: 4px solid var(--color-primary); /* Visuel markør */
+    border-radius: 4px;                   /* Let afrunding */
+}
+
+/* Testimonials - navn */
+.testimonial strong {
+    display: block;                       /* Placerer navn på egen linje */
+    margin-bottom: 4px;                   /* Luft til citattekst */
+}
+
+/* Testimonials - media wrapper */
+.testimonial-media {
+    position: relative;                   /* Reference for overlay-elementer */
+    display: inline-block;                /* Matcher billedets bredde */
+}
+
+/* Testimonials - illustration */
+.testimonial-illustration img {
+    display: block;                       /* Fjerner inline whitespace */
+    max-width: 100%;                      /* Gør billedet responsivt */
+    height: auto;                         /* Bevarer proportioner */
+}
+
+/* Testimonials - CTA overlay */
+.testimonial-actions {
+    position: absolute;                   /* Placeres oven på billedet */
+    display: flex;                        /* Flex-layout */
+    flex-direction: column;               /* Knapper oven på hinanden */
+    gap: 12px;                            /* Luft mellem knapper */
+}
+
+/* Desktop - justeret placering af CTA overlay */
+@media (min-width: 992px) {
+    .testimonial-actions {
+        bottom: 20px;                     /* Standard desktop-afstand */
+        left: 10px;                        /* Standard desktop-venstre */
+    }
+}
+
+/* Tablet og ned - overlay slås fra */
+@media (max-width: 991.98px) {
+    .testimonial-actions {
+        position: static;                 /* Slår overlay fra */
+        margin-top: 24px;                 /* Luft under illustration */
+    }
+}
+
+/* ============================================
+    Stopforløb
+   ============================================ */
+
+/* Wrapper for hvert forløbskort */
+.overview-card {
+    height: 100%;                           /* Ens højde på kort i grid-layout */
+    display: flex;                          /* Flexbox til vertikal opbygning */
+    flex-direction: column;                /* Billede placeres over indhold */
+}
+
+/* Wrapper omkring forløbsbillede */
+.overview-image-wrapper {
+    margin: 0;                              /* Fjerner standard margin fra figure */
+}
+
+/* Forløbsbillede */
+.overview-image {
+    width: 100%;                           /* Fylder hele kortets bredde */
+    height: auto;                          /* Bevarer billedets proportioner */
+    border-radius: 12px 12px 0 0;           /* Afrundede hjørner øverst */
+    object-fit: cover;                     /* Sikrer pæn beskæring af billedet */
+}
+
+/* Indholdsboks under billedet */
+.overview-content {
+    border: 2px solid var(--color-primary); /* Ramme i primær accentfarve */
+    border-top: none;                      /* Undgår dobbelt kant mod billedet */
+    border-radius: 0 0 12px 12px;           /* Afrundede hjørner nederst */
+    padding: 24px;                         /* Indvendig luft omkring indhold */
+    background-color: rgba(230, 221, 204, 0.5); /* Let kontrast til baggrunden */
+    flex-grow: 1;                          /* Fylder resten af kortets højde */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.30); /* Blød skygge der løfter boksen fra baggrunden */
+}
+
+/* Titel i forløbskort */
+.overview-content h3 {
+    margin-bottom: 16px;                   /* Luft under titel */
+    font-size: var(--font-size-subtitle);  /* Undertitel-størrelse */
+    font-weight: var(--font-weight-medium);/* Let fremhævet vægt */
+    color: var(--color-title);             /* Titel-farve */
+}
+
+/* Fakta-liste (møder og varighed) */
+.overview-facts {
+    list-style: none;                      /* Fjerner bullets */
+    padding: 0;                            /* Fjerner standard padding */
+    display: flex;                         /* Horisontal opstilling */
+    gap: 24px;                             /* Afstand mellem fakta */
+    margin-bottom: 16px;                  /* Luft under listen */
+}
+
+/* Fakta-element */
+.overview-facts li {
+    display: flex;                         /* Ikon og tekst på samme linje */
+    align-items: center;                   /* Vertikal centrering */
+    gap: 8px;                              /* Afstand mellem ikon og tekst */
+    font-size: var(--font-size-text);      /* Standard tekststørrelse */
+    color: var(--color-text);              /* Brødtekstfarve */
+    font-weight: var(--font-weight-regular); /* Normal tekstvægt */
+}
+
+/* Ikoner i fakta-liste */
+.overview-facts i {
+    color: var(--color-primary);           /* Accentfarve */
+    font-size: 18px;                       /* Ikonstørrelse */
+}
+
+/* Beskrivelsestekst i forløbskort */
+.overview-content p {
+    margin-bottom: 24px;                  /* Luft før CTA-knapper */
+    line-height: 1.6;                      /* Forbedret læsbarhed */
+    font-size: var(--font-size-text);      /* Standard brødtekst */
+    color: var(--color-text);              /* Brødtekstfarve */
+    font-weight: var(--font-weight-regular); /* Normal vægt */
+}
+
+/* Container til CTA-knapper */
+.overview-actions {
+    display: flex;                         /* Knapper vises side om side */
+    gap: 12px;                             /* Afstand mellem knapper */
+    flex-wrap: wrap;                      /* Bryder pænt på små skærme */
+}
+
+/* Callout-boks - fremhævet informationsboks */
+.course-callout .callout-box {
+    background-color: var(--color-primary); /* Primær baggrundsfarve */
+    color: var(--color-text);               /* Standard tekstfarve */
+    padding: 40px 48px;                     /* Indvendig luft i boksen */
+    border-radius: 18px;                    /* Bløde, afrundede hjørner */
+    max-width: 100%;                        /* Fylder tilgængelig bredde */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.30); /* Blød skygge der løfter boksen fra baggrunden */
+}
+
+/* Header i callout - ikon og overskrift */
+.course-callout .callout-header {
+    display: flex;                          /* Flexbox til vandret layout */
+    align-items: center;                    /* Vertikal centrering */
+    gap: 12px;                              /* Afstand mellem ikon og tekst */
+    margin-bottom: 16px;                   /* Luft under header */
+}
+
+/* Ikon i callout-header */
+.course-callout .callout-header i {
+    font-size: 24px;                       /* Størrelse på ikon */
+    color: var(--color-title);              /* Titel-/kontrastfarve */
+}
+
+/* Overskrift i callout-header */
+.course-callout .callout-header h3 {
+    margin: 0;                              /* Fjerner standard margin */
+    font-size: var(--font-size-subtitle);   /* Konsistent overskriftsstørrelse */
+    font-weight: var(--font-weight-semibold); /* Semi-bold for tydelighed */
+}
+
+/* Brødtekst i callout */
+.course-callout .callout-text {
+    font-size: var(--font-size-text);       /* Standard brødtekststørrelse */
+    line-height: 1.6;                       /* God læsbarhed */
+    margin-bottom: 8px;                    /* Luft til undertekst */
+}
+
+/* Undertekst i callout */
+.course-callout .callout-subtext {
+    font-size: 14px;                       /* mindre diskret tekst */
+    opacity: 0.90;                         /* Let afdæmpning */
+    margin: 0;                              /* Fjerner standard margin */
+    font-weight: var(--font-weight-medium); /* Medium vægt for tydelighed */
+}
+
+
+/* Uddybende forløb detaljer */
+.course-detail {
+    padding: 80px 0;                       /* Luft over og under sektionen */
+}
+
+/* Hero-illustration i forløbssektion */
+.course-detail .detail-hero img {
+    width: 100%;                           /* Fylder containerens fulde bredde */
+    height: auto;                          /* Bevarer billedets proportioner */
+    border-radius: 18px;                   /* Bløde, moderne hjørner */
+}
+
+/* Underoverskrifter i forløbssektion */
+.course-detail h3 {
+    margin-bottom: 12px;                   /* Luft under overskriften */
+    font-size: var(--font-size-subtitle);  /* Konsistent typografisk hierarki */
+    font-weight: var(--font-weight-semibold); /* Tydelig, men rolig vægt */
+    color: var(--color-title);             /* Standard titel-farve */
+}
+
+/* Brødtekst i forløbssektion */
+.course-detail p {
+    line-height: 1.6;                      /* God læsbarhed i længere tekst */
+    font-size: var(--font-size-text);      /* Standard brødtekststørrelse */
+    color: var(--color-text);              /* Standard tekstfarve */
+}
+
+/* Liste: Sådan foregår det */
+.course-detail .detail-list {
+    list-style: none;                      /* Fjerner standard bullets */
+    padding: 0;                            /* Fjerner standard padding */
+    margin: 0;                             /* Fjerner standard margin */
+}
+
+/* Listeelement i forløbsbeskrivelse */
+.course-detail .detail-list li {
+    display: flex;                         /* Ikon og tekst på samme linje */
+    align-items: center;                   /* Vertikal centrering */
+    gap: 12px;                             /* Kontrolleret afstand */
+    margin-bottom: 12px;                   /* Luft mellem punkter */
+    line-height: 1.6;                      /* God linjeafstand */
+}
+
+/* Check-ikon i forløbslisten */
+.course-detail .detail-list i {
+    color: var(--color-primary);           /* Primær accentfarve */
+    font-size: 18px;                       /* ikon størrelse */
+    flex-shrink: 0;                        /* Forhindrer ikon i at krympe */
+}
+
+/* Samlet beslutningsområde (fakta + CTA) */
+.course-detail .detail-decision {
+    padding: 40px 48px;                    /* Indvendig luft */
+    border-radius: 18px;                   /* Bløde hjørner */
+    border: 2px solid var(--color-primary);/* Markerende ramme */
+    background-color: rgba(230, 221, 204, 0.5); /* 50% af navbarens farve */
+    max-width: 100%;                       /* Undgår utilsigtet indsnævring */
+}
+
+/* Fakta og CTA - øverste del */
+.course-detail .detail-decision-top {
+    display: grid;                         /* Stabil layoutstruktur */
+    grid-template-columns: 1fr auto;       /* Fakta til venstre, CTA til højre */
+    align-items: start;                    /* Topjustering */
+    column-gap: 48px;                     /* Afstand mellem kolonner */
+    margin-bottom: 24px;                  /* Luft til næste indhold */
+}
+
+/* Fakta-liste */
+.course-detail .detail-decision .detail-facts {
+    list-style: none;                      /* Fjerner bullets */
+    padding: 0;                            /* Fjerner standard padding */
+    margin: 0;                             /* Fjerner standard margin */
+    display: flex;                         /* Flex-layout */
+    flex-direction: column;               /* Punkter lodret */
+    gap: 12px;                             /* Afstand mellem punkter */
+}
+
+/* Fakta-element */
+.course-detail .detail-decision .detail-facts li {
+    display: flex;                         /* Ikon og tekst på linje */
+    align-items: center;                   /* Vertikal centrering */
+    gap: 12px;                             /* Afstand mellem ikon og tekst */
+}
+
+/* Fakta-ikon */
+.course-detail .detail-facts li i {
+    width: 28px;                           /* Fast ikon-bredde */
+    height: 28px;                          /* Fast ikon-højde */
+    display: flex;                         /* Flexbox til centrering */
+    align-items: center;                   /* Vertikal centrering */
+    justify-content: center;               /* Horisontal centrering */
+    font-size: 16px;                       /* Ikonstørrelse */
+    color: var(--color-primary);           /* Primær farve */
+}
+
+/* CTA-knap i beslutningsområde */
+.course-detail .detail-decision .cta {
+    align-self: start;                     /* Starter øverst i grid */
+}
+
+/* Tip-note nederst i beslutningsområdet */
+.course-detail .detail-note {
+    display: flex;                         /* Ikon og tekst på linje */
+    align-items: center;                   /* Vertikal centrering */
+    gap: 12px;                             /* Afstand mellem ikon og tekst */
+    padding-top: 20px;                    /* Luft over indhold */
+    border-top: 1px solid rgba(0, 0, 0, 0.12); /* Visuel adskillelse */
+    font-size: var(--font-size-text);       /* Tekststørrelse */
+    color: var(--color-text);              /* Standard tekstfarve */
+}
+
+/* Ikon i tip-note */
+.course-detail .detail-note i {
+    width: 28px;                           /* Fast ikon-bredde */
+    height: 28px;                          /* Fast ikon-højde */
+    display: flex;                         /* Flexbox til centrering */
+    align-items: center;                   /* Vertikal centrering */
+    justify-content: center;               /* Horisontal centrering */
+    font-size: 18px;                       /* Ikonstørrelse */
+    color: var(--color-primary);           /* Primær farve */
+}
+
+/* ============================================
+    Kontakt
+   ============================================ */
+
+/* Contact card - overordnet kort til kontaktinformation */
+.contact-card {
+    border: 2px solid var(--color-primary);     /* Primær kant der fremhæver kortet */
+    border-radius: 12px;                        /* Afrundede hjørner */
+    padding: 24px;                              /* Indvendig luft omkring indhold */
+    height: 100%;                               /* Ens højde i kolonner */
+    display: flex;                              /* Flexbox til struktureret layout */
+    flex-direction: column;                    /* Indhold placeres lodret */
+    gap: 16px;                                 /* Afstand mellem indholdselementer */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* Blød skygge der løfter boksen fra baggrunden */
+}
+
+/* Kontaktkort med stablet indhold (telefon + email) */
+.contact-card--stacked {
+    justify-content: space-between;             /* Fordeler indhold jævnt i højden */
+}
+
+/* Header i contact card - ikon og titel */
+.contact-card-header {
+    display: flex;                              /* Flexbox til vandret layout */
+    align-items: center;                        /* Vertikal centrering */
+    gap: 12px;                                 /* Afstand mellem ikon og titel */
+}
+
+/* Ikon i contact card header */
+.contact-card-header i {
+    font-size: 22px;                            /* Størrelse på ikon */
+    color: var(--color-primary);                /* Primær accentfarve */
+}
+
+/* Titel i contact card header */
+.contact-card-header h3 {
+    font-size: var(--font-size-cardtitle);      /* Overskriftens størrelse */
+    font-weight: var(--font-weight-semibold);   /* Semi-bold for tydelighed */
+    margin: 0;                                  /* Fjerner standard margin */
+}
+
+/* Kontaktblok - telefon eller email */
+.contact-block {
+    display: flex;                              /* Flexbox til gruppering */
+    flex-direction: column;                    /* Indhold placeres lodret */
+    gap: 6px;                                  /* Tæt afstand mellem tekstlinjer */
+}
+
+/* Primær kontaktinformation (telefon/email) */
+.contact-main {
+    font-size: var(--font-size-text);           /* Tekststørrelse */
+    font-weight: var(--font-weight-semibold);   /* Fremhæver vigtig information */
+    margin: 0;                                  /* Fjerner standard margin */
+}
+
+/* Link i primær kontakttekst */
+.contact-main a {
+    color: var(--color-text);                   /* Standard tekstfarve */
+    text-decoration: none;                     /* Fjerner understregning */
+}
+
+/* Hover-effekt på kontaktlink */
+.contact-main a:hover {
+    text-decoration: underline;                /* Understregning ved hover */
+}
+
+/* Sekundær forklarende tekst */
+.contact-sub {
+    font-size: 14px;                            /* Mindre tekststørrelse */
+    color: var(--color-text);                   /* Afdæmpet tekstfarve */
+    margin: 0;                                  /* Fjerner standard margin */
+}
+
+/* Skillelinje mellem telefon og email */
+.contact-divider {
+    width: 100%;                               /* Fylder hele kortets bredde */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Diskret skillelinje */
+    margin: 20px 0;                            /* Luft over og under linjen */
+}
+
+/* Wrapper til åbningstider */
+.opening-hours {
+    display: flex;                              /* Flexbox til lodret layout */
+    flex-direction: column;                    /* Rækker placeres lodret */
+    gap: 8px;                                  /* Afstand mellem rækker */
+}
+
+/* Række i åbningstider (dag + tid) */
+.opening-row {
+    display: flex;                              /* Flexbox til vandret opdeling */
+    justify-content: space-between;             /* Dag venstre, tid højre */
+    font-size: 15px;                            /* Læsbar tekststørrelse */
+    padding: 6px 0;                             /* Vertikal luft */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Skillelinje mellem rækker */
+}
+
+/* Sidste række i åbningstider */
+.opening-row:last-child {
+    border-bottom: none;                        /* Fjerner skillelinje på sidste række */
+}
+
+/* Mobil-tilpasning af contact cards */
+@media (max-width: 576px) {
+    .contact-card {
+        padding: 20px;                          /* Mindre padding på mobil */
+    }
+
+    .contact-card-header h3 {
+        font-size: 16px;                        /* Mindre overskrift på små skærme */
+    }
+}
+
+/* Formular-wrapper - omslutter hele kontaktformularen */
+.form-wrapper {
+    max-width: 600px;                      /* Begrænser bredden for god læsbarhed */
+    margin: 0 auto;                       /* Centrerer formularen horisontalt */
+    background-color: rgba(230, 221, 204, 0.5); /* Let farvet baggrund */
+    padding: 32px;                        /* Indvendig luft omkring formularen */
+    border-radius: 12px;                  /* Afrundede hjørner */
+    border: 2px solid var(--color-primary); /* Synlig kant i primær farve */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* Blød skygge der løfter boksen fra baggrunden */
+}
+
+/* Formular-layout - styrer opbygningen af felter */
+.form-wrapper form {
+    display: flex;                        /* Flexbox til vertikal struktur */
+    flex-direction: column;              /* Felter placeres lodret */
+    gap: 20px;                           /* Ens afstand mellem felter */
+}
+
+/* Form-group - wrapper for label og input */
+.form-group {
+    display: flex;                       /* Flexbox til gruppering */
+    flex-direction: column;             /* Label og input lodret */
+    gap: 6px;                            /* Tæt afstand mellem label og felt */
+}
+
+/* Labels i formularen */
+.form-group label {
+    font-size: var(--font-size-text);       /* Tekststørrelse */
+    font-weight: var(--font-weight-semibold); /* Fremhæver labels */
+}
+
+/* Input- og textarea-felter */
+.form-group input,
+.form-group textarea {
+    font-size: 14px;                    /* tekststørrelse */
+    padding: 10px 12px;                 /* Indvendig luft i felterne */
+    border-radius: 8px;                 /* Afrundede hjørner */
+    border: 1px solid rgba(0, 0, 0, 0.15); /* Diskret standard-kant */
+}
+
+/* Fokus-tilstand for input og textarea */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;                      /* Fjerner browserens standard-outline */
+    border-color: var(--color-primary); /* Fremhæver aktivt felt */
+}
+
+/* Tekstfelt (textarea) */
+.form-group textarea {
+    resize: vertical;                   /* Tillader kun lodret resizing */
+}
+
+/* CTA-knap i kontaktformular */
+.contact-form .cta {
+    align-self: flex-start;             /* Venstrejusterer CTA-knappen */
+}
+
+/* Mobil-tilpasning af formular */
+@media (max-width: 576px) {
+    .form-wrapper {
+        padding: 24px;                  /* Mindre padding på små skærme */
+    }
+}
+
+/* FAQ Accordion-wrapper - begrænser læsebredde */
+.faq-accordion {
+    max-width: 800px;                          /* Maksimal bredde for bedre læsbarhed */
+    margin: 0 auto;                            /* Centrerer accordion horisontalt */
+}
+
+/* FAQ Accordion-item - enkelt spørgsmål */
+.faq .accordion-item {
+    background-color: var(--color-surface);    /* Lys baggrund for hvert spørgsmål */
+    border: 2px solid var(--color-primary);    /* Orange kant for visuel sammenhæng */
+    border-radius: 12px;                       /* Afrundede hjørner */
+    margin-bottom: 16px;                       /* Luft mellem spørgsmål */
+    overflow: hidden;                          /* Sikrer at indhold ikke flyder ud */
+}
+
+/* Accordion-knap - klikbart spørgsmål */
+.faq .accordion-button {
+    background-color: transparent;             /* Fjerner Bootstrap baggrund */
+    font-weight: var(--font-weight-semibold);  /* Fremhæver spørgsmålet */
+    font-size: var(--font-size-text);           /* Tekststørrelse */
+    padding: 16px 20px;                        /* Luft omkring teksten */
+    box-shadow: none;                          /* Fjerner Bootstrap fokus-skygge */
+}
+
+/* Fokus-tilstand for accordion-knap */
+.faq .accordion-button:focus {
+    box-shadow: none;                          /* Forhindrer uønsket skygge */
+    border-color: transparent;                 /* Ingen kant ved fokus */
+}
+
+/* Aktiv accordion-knap (åbent spørgsmål) */
+.faq .accordion-button:not(.collapsed) {
+    color: var(--color-primary);               /* Fremhæver aktivt spørgsmål */
+    background-color: transparent;             /* Bevarer gennemsigtig baggrund */
+}
+
+/* Fjerner Bootstrap-standard pil-baggrund */
+.faq .accordion-button::after {
+    filter: none;                              /* Nulstiller default styling */
+}
+
+/* Accordion-body - svar-tekst */
+.faq .accordion-body {
+    font-weight: var(--font-weight-regular);  /* Fremhæver spørgsmålet */
+    font-size: 14px;                        /* Tekststørrelse */
+    line-height: 1.6;                          /* God læsbarhed */
+    padding: 0 20px 20px;                     /* Luft omkring svar */
+    color: var(--color-text);                  /* Standard tekstfarve */
+}
+
+/* ============================================
+    Unge Fortæller
+   ============================================ */
+
+/* Statistik box - fremhævet talboks */
+.stat-box {
+    background-color: var(--color-primary); /* Primær baggrundsfarve for boksen */
+    border-radius: 12px;                    /* Afrundede hjørner */
+    padding: 24px;                          /* Indvendig luft */
+    text-align: center;                    /* Centrerer tekst horisontalt */
+    height: 100%;                           /* Ens højde i grid-layout */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* Blød skygge der løfter boksen fra baggrunden */
+    transition: transform 0.25s ease;      /* Blød animation ved hover */
+}
+
+/* Hover-effekt for Statistik box */
+.stat-box:hover {
+    transform: translateY(-3px);            /* Løfter kortet let ved hover */
+}
+
+/* Statistik-tal */
+.stat-value {
+    display: block;                         /* Gør elementet blokbaseret */
+    font-size: 32px;                        /* Stor og tydelig talstørrelse */
+    font-weight: var(--font-weight-semibold); /* Semi-bold for tydelighed */
+    color: var(--color-text);               /* Tekst farve */
+    margin-bottom: 6px;                    /* Luft mellem tal og tekst */
+}
+
+/* Statistik-tekst */
+.stat-text {
+    margin: 0;                              /* Fjerner standard margin */
+    font-size: 14px;                       /* Diskret tekststørrelse */
+    color: var(--color-text);               /* Tekst farve */
+}
+
+/* Story card - individuelt citatkort */
+.story-card {
+    border: 2px solid var(--color-primary); /* Orange kant for visuel sammenhæng */
+    border-radius: 16px;                    /* Bløde hjørner */
+    padding: 24px;                          /* Indvendig luft */
+    height: 100%;                           /* Ens højde i grid */
+}
+
+/* Header i story card */
+.story-header {
+    display: flex;                          /* Flexbox til layout */
+    gap: 12px;                              /* Afstand mellem avatar og tekst */
+    align-items: center;                   /* Vertikal centrering */
+    margin-bottom: 12px;                   /* Luft under header */
+}
+
+/* Avatar-wrapper i story card */
+.story-avatar {
+    width: 40px;                            /* Fast bredde */
+    height: 40px;                           /* Fast højde */
+    border-radius: 50%;                     /* Cirkulær avatar */
+    background-color: var(--color-primary); /* Primær farve i baggrunden */
+    display: flex;                          /* Flexbox til centrering */
+    align-items: center;                   /* Vertikal centrering */
+    justify-content: center;               /* Horisontal centrering */
+}
+
+/* Ikon inde i avatar */
+.story-avatar i {
+    color: #000000;                         /* Sort ikon */
+}
+
+/* Meta-information (navn, alder osv.) */
+.story-meta {
+    margin: 0;                              /* Fjerner standard margin */
+    font-size: 13px;                       /* Lille, diskret tekst */
+    color: var(--color-text);         /* tekstfarve */
+}
+
+/* Citat i story card */
+.story-quote {
+    background-color: rgba(230, 221, 204, 0.5);  /* 50% opacity på navbar farven */
+    border-left: 4px solid var(--color-primary); /* Markant venstrekant */
+    padding: 12px;                          /* Indvendig luft */
+    margin: 16px 0;                        /* Luft over og under citat */
+    font-style: italic;                   /* Kursiv for citat-look */
+}
+
+/* Brødtekst i story card */
+.story-text {
+    font-size: var(--font-size-text);       /* Standard tekststørrelse */
+    line-height: 1.6;                       /* God læsbarhed */
+    margin-bottom: 16px;                   /* Luft til næste element */
+}
+
+/* Liste med fordele */
+.story-benefits {
+    list-style: none;                      /* Fjerner standard bullets */
+    padding: 0;                             /* Fjerner standard padding */
+    margin: 0;                              /* Fjerner standard margin */
+}
+
+/* Ikon foran hvert punkt i fordele */
+.story-benefits li::before {
+    content: "★";                          /* Stjerne-ikon */
+    color: var(--color-primary);            /* Primær accentfarve */
+    margin-right: 6px;                     /* Luft mellem ikon og tekst */
+}
+
+/* ============================================
+    Fakta & Viden
+   ============================================ */
+
+/* Overordnet fact card */
+.fact-card {
+    border: 2px solid var(--color-primary); /* Orange kant der fremhæver kortet */
+    border-radius: 16px;                    /* Bløde, afrundede hjørner */
+    padding: 24px;                          /* Indvendig luft omkring indhold */
+    height: 100%;                           /* Ens højde i grid-layout */
+    display: flex;                          /* Flexbox til struktureret layout */
+    flex-direction: column;                /* Indhold placeres lodret */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* Blød skygge der løfter kortet fra baggrunden */
+    transition: transform 0.25s ease;      /* Blød animation ved hover */
+}
+
+/* Hover-effekt for fact card */
+.fact-card:hover {
+    transform: translateY(-3px);            /* Løfter kortet let ved hover */
+}
+
+/* Ikon-wrapper til fact card */
+.fact-card-icon {
+    width: 40px;                            /* Fast bredde på ikon-container */
+    height: 40px;                           /* Fast højde på ikon-container */
+    border-radius: 50%;                     /* Gør containeren cirkulær */
+    background-color: var(--color-primary); /* Primær accentfarve i baggrunden */
+    display: flex;                          /* Flexbox til centrering af ikon */
+    align-items: center;                   /* Vertikal centrering af ikon */
+    justify-content: center;               /* Horisontal centrering af ikon */
+    margin-bottom: 12px;                   /* Luft mellem ikon og tekst */
+}
+
+/* Ikon inde i fact card */
+.fact-card-icon i {
+    font-size: 18px;                        /* Størrelse på ikon */
+    color: #000000;                         /* Sort ikon for god kontrast */
+}
+
+/* Titel i fact card */
+.fact-card-title {
+    font-size: 18px;                        /* Tydelig overskrift */
+    font-weight: var(--font-weight-semibold); /* Semi-bold for hierarki */
+    margin-bottom: 8px;                    /* Luft under titlen */
+    color: var(--color-title);              /* Titel-farve */
+}
+
+/* Brødtekst i fact card */
+.fact-card-text {
+    font-size: var(--font-size-text);       /* Standard tekststørrelse */
+    line-height: 1.6;                       /* God læsbarhed */
+    color: var(--color-text);               /* Standard tekstfarve */
+    margin-bottom: 16px;                   /* Luft til næste element */
+}
+
+/* Kilde-link i fact card */
+.fact-card-source {
+    margin-top: auto;                       /* Skubber link til bunden af kortet */
+    font-size: 13px;                        /* Diskret tekststørrelse */
+    color: var(--color-text);               /*  tekstfarve */
+    text-decoration: underline;             /* Understregning for link-tydelighed */
+}
+
+/* Hover-effekt på kilde-link */
+.fact-card-source:hover {
+    color: var(--color-primary);            /* Fremhæves med primær farve */
+}
+
+/* Illustration i økonomi-sektionen */
+.economy-illustration img {
+    width: 100%; /* Sikrer at illustrationen fylder containerens fulde bredde */
+    height: auto; /* Bevarer billedets proportioner */
+    display: block; /* Fjerner uønsket whitespace under billedet */
+}
+
+/* Statistik-boks */
+.economy-stat {
+    background-color: var(--color-primary); /* Bruger primærfarven som baggrund */
+    border-radius: 12px; /* Afrunder hjørnerne for et blødt og moderne udtryk */
+    padding: 20px; /* Indvendig luft omkring indholdet */
+    text-align: center; /* Centrerer tekstindholdet */
+    height: 100%; /* Sikrer ens højde på tværs af grid */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* Blød skygge der løfter boksen fra baggrunden */
+    transition: transform 0.25s ease; /* Blød animation ved hover-interaktion */
+}
+
+/* Hover-effekt for statistik-boks */
+.economy-stat:hover {
+    transform: translateY(-3px); /* Løfter boksen let for visuel feedback */
+}
+
+/* Værdi (fx beløb eller procent) */
+.economy-value {
+    display: block; /* Gør værdien til et selvstændigt linjeelement */
+    font-size: var(--font-size-subtitle); /* Større tekst for at fremhæve tallet */
+    font-weight: var(--font-weight-semibold); /* Semi-fed skrift for tydelighed */
+    color: var(--color-title); /* Titel-farve for høj kontrast */
+}
+
+/* Label til værdien */
+.economy-label {
+    font-size: 14px; /* Mindre tekststørrelse end værdien */
+    font-weight: var(--font-weight-medium); /* Medium vægt for god læsbarhed */
+    color: var(--color-text); /* Standard tekstfarve */
+}
+
+/* Note / forklarende tekst under statistikker */
+.economy-note {
+    margin-top: 20px; /* Afstand til statistik-boksene */
+    font-size: 14px; /* Lille og diskret tekststørrelse */
+    color: var(--color-text); /* Neutral tekstfarve */
+}
+
+/* Effekt-kort */
+.effect-card {
+    position: relative; /* Muliggør absolut positionering af indre elementer (fx badges) */
+    border-radius: 16px; /* Afrunder kortets hjørner for et moderne og blødt udtryk */
+    padding: 24px 24px 22px; /* Indvendig luft med let mindre bund-padding for visuel balance */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06); /* Blød skygge der løfter kortet fra baggrunden */
+    height: 100%; /* Sikrer ens højde i grid-layout */
+    border: 2px solid var(--color-primary); /* Fremhæver kortet med primærfarven */
+    transition: transform 0.25s ease; /* Blød animation ved hover-interaktion */
+}
+
+/* Hover-effekt for effekt-kort */
+.effect-card:hover {
+    transform: translateY(-2px); /* Let løft ved hover for subtil interaktion */
+}
+
+/* Tids-badge (fx “Efter 24 timer”) */
+.effect-time {
+    display: inline-block; /* Gør badge størrelsestilpasset indholdet */
+    background-color: var(--color-primary); /* Brug af primærfarve for tydelighed */
+    padding: 6px 12px; /* Indvendig luft for læsbarhed og klikflade */
+    border-radius: 30px; /* Gør badge pill-formet */
+    font-size: 12px; /* Lille tekststørrelse der signalerer metadata */
+    font-weight: var(--font-weight-semibold); /* Semi-fed tekst for bedre kontrast */
+    margin-bottom: 10px; /* Luft mellem badge og kortets titel */
+}
+
+/* Titel i effekt-kort */
+.effect-card h3 {
+    font-size: var(--font-size-cardtitle); /* Fremhævet titelstørrelse uden at dominere layoutet */
+    font-weight: var(--font-weight-semibold); /* Konsistent typografisk vægt */
+    margin-bottom: 6px; /* Lille afstand til brødteksten */
+}
+
+/* Brødtekst i effekt-kort */
+.effect-card p {
+    margin: 0; /* Fjerner standard margin for strammere layout */
+    font-size: var(--font-size-text); /* Bruger global tekststørrelse */
+    line-height: 1.6; /* Øger læsbarheden med god linjeafstand */
+}
+
+/* Overordnet kort til nikotin-typer */
+.nicotine-card {
+    border-radius: 16px; /* Afrunder kortets hjørner for et blødere, moderne udtryk */
+    border: 2px solid var(--color-primary); /* Markerede kort med primærfarve fra design system */
+    padding: 20px; /* Indvendig luft omkring indholdet */
+    text-align: center; /* Centrerer tekst for et balanceret kampagne-look */
+
+    display: flex; /* Gør kortet fleksibelt */
+    flex-direction: column; /* Stabler indhold lodret */
+    align-items: center; /* Centrerer indhold horisontalt */
+
+    transition: transform 0.25s ease; /* Blød animation ved hover */
+}
+
+/* Hover-effekt for kort */
+.nicotine-card:hover {
+    transform: translateY(-4px); /* Løfter kortet let for interaktiv feedback */
+}
+
+/* Wrapper til illustration / ikon */
+.nicotine-card-icon {
+    margin-bottom: 20px; /* Luft mellem ikon og titel */
+}
+
+/* Selve billedet i kortet */
+.nicotine-card-icon img {
+    max-width: 100%; /* Begrænser billedets størrelse for ensartet layout */
+    height: auto; /* Bevarer billedets proportioner */
+}
+
+/* Titel for nikotin-typen */
+.nicotine-card-title {
+    font-size: var(--font-size-cardtitle); /* Gør titlen tydelig uden at dominere */
+    font-weight: var(--font-weight-semibold); /* Semi-fed skrift for visuel hierarki */
+    margin-bottom: 15px; /* Luft mellem titel og brødtekst */
+}
+
+/* Brødtekst med forklarende indhold */
+.nicotine-card-text {
+    font-size: var(--font-size-text); /* Let reduceret tekststørrelse for bedre læsbarhed */
+    line-height: 1.6; /* Øger linjeafstand for roligere tekstflow */
+    margin-bottom: 20px; /* Afstand før advarsels-element */
+    color: var(--color-text); /* Standard tekstfarve fra design system */
+}
+
+/* Advarsels- eller highlight-tekst nederst i kortet */
+.nicotine-card-warning {
+    margin-top: auto; /* Skubber advarslen ned i bunden af kortet */
+
+    font-size: 12px; /* Mindre tekststørrelse end brødtekst */
+    font-weight: var(--font-weight-semibold); /* Gør advarslen tydelig */
+    text-transform: uppercase; /* Giver et badge-lignende udtryk */
+    letter-spacing: 0.04em; /* Øger bogstavafstand for bedre læsbarhed */
+
+    color: var(--color-primary); /* Bruger primærfarven til visuel konsistens */
+    padding: 6px 16px; /* Indvendig luft så teksten ikke klistrer */
+}
+
+/* ============================================
+    Ressourcer & Kilder
+   ============================================ */
+
+/* Resource-kort */
+.resource-card {
+    background-color: var(--color-surface); /* Lys baggrund der adskiller kortet fra sektionen */
+    border: 2px solid var(--color-primary); /* Markant kant i primærfarven */
+    border-radius: 16px; /* Afrundede hjørner for et moderne udtryk */
+    padding: 24px; /* Indvendig luft omkring indholdet */
+    height: 100%; /* Sikrer ens højde i Bootstrap grid */
+    display: flex;
+    flex-direction: column; /* Stabler indhold lodret */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* Blød skygge der løfter boksen fra baggrunden */
+    transition: transform 0.25s ease; /* Blød hover-animation */
+}
+
+/* Hover-effekt for resource-kort */
+.resource-card:hover {
+    transform: translateY(-3px); /* Let løft ved hover */
+}
+
+/* Header: ikon + titel på samme linje */
+.resource-card-header {
+    display: flex; /* Placerer ikon og titel horisontalt */
+    align-items: center; /* Lodret centrering */
+    gap: 12px; /* Afstand mellem ikon og titel */
+    margin-bottom: 12px; /* Luft til brødtekst */
+}
+
+/* Ikon-wrapper */
+.resource-card-icon {
+    width: 40px; /* Fast ikonstørrelse */
+    height: 40px;
+    border-radius: 50%; /* Cirkulær baggrund */
+    background-color: var(--color-primary); /* Primærfarve som baggrund */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Forhindrer ikonet i at blive klemt */
+}
+
+/* Ikon */
+.resource-card-icon i {
+    font-size: 18px; /* Ikonets størrelse */
+    color: #000000; /* Sort ikon for høj kontrast */
+}
+
+/* Titel i resource-kort */
+.resource-card-title {
+    font-size: 18px; /* Tydelig overskrift */
+    font-weight: var(--font-weight-semibold); /* Semi-fed skrift */
+    margin: 0; /* Fjerner standard margin */
+    color: var(--color-title); /* Titel-farve fra design system */
+}
+
+/* Brødtekst i resource-kort */
+.resource-card-text {
+    font-size: var(--font-size-text); /* Standard tekststørrelse */
+    line-height: 1.6; /* God læsbarhed */
+    color: var(--color-text); /* Standard tekstfarve */
+    margin-bottom: 12px; /* Afstand til handling */
+}
+
+/* Primær handling (telefonnummer, link eller platform) */
+.resource-card-action {
+    font-size: 16px; /* Fremhævet tekststørrelse */
+    font-weight: var(--font-weight-semibold); /* Gør handlingen tydelig */
+    color: var(--color-primary); /* Primærfarve for call-to-action */
+    margin-top: auto; /* Skubber handlingen ned i bunden */
+}
+
+/* Metadata (åbningstider, ekstra info) */
+.resource-card-meta {
+    margin-top: 4px; /* Lille afstand til handling */
+    font-size: 13px; /* Diskret tekststørrelse */
+    color: var(--color-text); /* Afdæmpet farve */
+}
+
+/* Kilde-kort */
+.source-card {
+    border: 2px solid var(--color-primary); /* Primærfarvet kant for visuel sammenhæng */
+    border-radius: 16px; /* Afrundede hjørner */
+    padding: 24px; /* Indvendig luft */
+    height: 100%; /* Ens højde i Bootstrap grid */
+    display: flex;
+    flex-direction: column; /* Stabler indhold lodret */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20); /* Diskret skygge der løfter kortet */
+    transition: transform 0.25s ease; /* Blød hover-animation */
+}
+
+/* Hover-effekt for kilde-kort */
+.source-card:hover {
+    transform: translateY(-3px); /* Let løft ved hover */
+}
+
+/* Titel på kilde */
+.source-card-title {
+    font-size: var(--font-size-cardtitle); /* Tydelig overskrift */
+    font-weight: var(--font-weight-semibold); /* Semi-fed skrift */
+    margin-bottom: 8px; /* Luft til metadata */
+    color: var(--color-title); /* Titel-farve fra design system */
+}
+
+/* Metadata (afsender + beskrivelse) */
+.source-card-meta {
+    font-size: var(--font-size-text); /* Standard tekststørrelse */
+    line-height: 1.6; /* God læsbarhed */
+    color: var(--color-text); /* Neutral tekstfarve */
+    margin-bottom: 12px; /* Afstand til link */
+}
+
+/* Link til ekstern kilde */
+.source-card-link {
+    margin-top: auto; /* Skubber linket til bunden af kortet */
+    font-size: 14px; /* Diskret men læsbar størrelse */
+    color: var(--color-primary); /* Primærfarve for tydelig klikbarhed */
+    text-decoration: none; /* Fjerner standard underline */
+    word-break: break-word; /* Forhindrer layout-brud ved lange URL’er */
+}
+
+/* Hover-effekt på link */
+.source-card-link:hover {
+    text-decoration: underline; /* Understregning ved hover for klar feedback */
+}
+
+/* Mobil-tilpasning */
+@media (max-width: 575px) {
+
+    /* Mindre padding på små skærme */
+    .source-card {
+        padding: 20px;
+    }
+
+    /* Lidt mindre titel på mobil */
+    .source-card-title {
+        font-size: 17px;
+    }
+}
+

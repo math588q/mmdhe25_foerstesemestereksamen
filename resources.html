@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Sikrer korrekt visning på mobile enheder -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Må IKKE indekseres af søgemaskiner -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
+    <title>Ressourcer & Kilder</title>
+
+    <!-- Bootstrap CSS: bruges til grid, responsivitet og færdige UI-komponenter -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Inter font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Egen CSS: design og tilpasninger -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header: indeholder navigation og evt. hero-sektion -->
+    <header>
+
+        <!-- Hovednavigation -->
+        <nav class="navbar navbar-expand-lg fixed-top main-navbar" aria-label="Hovednavigation">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                </a>
+
+                <!-- Offcanvas-menu (mobil / tablet) -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+
+                    <!-- Header i offcanvas -->
+                    <div class="offcanvas-header">
+                        <a href="./index.html">
+                            <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                        </a>
+
+                        <!-- Luk-knap -->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Luk menu"></button>
+                    </div>
+
+                    <!-- Navigationens indhold -->
+                    <div class="offcanvas-body">
+
+                        <!-- Navigationsliste -->
+                        <ul class="navbar-nav justify-content-center flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./course.html">Stopforløb</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./facts.html">Fakta &amp; Viden</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./stories.html">Unge fortæller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Kontakt</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Call-to-action -->
+                <a href="./course.html" class="cta primary cta-navbar">Tilmeld</a>
+
+                <!-- Burger-menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Åbn menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Main: sidens primære indhold -->
+    <main id="main-content">
+
+        <!-- Sideintro / page header -->
+        <div class="page-header">
+            <h1 class="page-title">Ressourcer & Kilder</h1>
+            <p class="page-subtitle">
+                Find hjælp, værktøjer og troværdige kilder til din rejse mod et røgfrit liv
+            </p>
+        </div>
+
+        <!-- Sektion: Få hjælp nu -->
+        <section class="resources-section">
+
+            <div class="container">
+
+                <!-- Sektion titel -->
+                <h2 class="section-title">Få hjælp nu</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Her finder du gratis rådgivning og støtte, hvis du ønsker hjælp til at stoppe med nikotin.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Stoplinjen -->
+                    <div class="col-12 col-md-4">
+                        <article class="resource-card">
+
+                            <div class="resource-card-header">
+                                <div class="resource-card-icon">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+
+                                <h3 class="resource-card-title">
+                                    Stoplinjen
+                                </h3>
+                            </div>
+
+                            <p class="resource-card-text">
+                                Gratis telefonrådgivning om nikotinstop
+                            </p>
+
+                            <p class="resource-card-action">
+                                80 31 31 31
+                            </p>
+
+                            <p class="resource-card-meta">
+                                Mandag-Fredag 9-17
+                            </p>
+
+                        </article>
+                    </div>
+
+                    <!-- Kræftens Bekæmpelse -->
+                    <div class="col-12 col-md-4">
+                        <article class="resource-card">
+
+                            <div class="resource-card-header">
+                                <div class="resource-card-icon">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+
+                                <h3 class="resource-card-title">
+                                    Kræftens Bekæmpelse
+                                </h3>
+                            </div>
+
+                            <p class="resource-card-text">
+                                Professionel rådgivning og støtte
+                            </p>
+
+                            <p class="resource-card-action">
+                                80 30 10 30
+                            </p>
+
+                            <p class="resource-card-meta">
+                                Mandag-Fredag 9-21 · Weekend 12-18
+                            </p>
+
+                        </article>
+                    </div>
+
+                    <!-- Chat med ekspert -->
+                    <div class="col-12 col-md-4">
+                        <article class="resource-card">
+
+                            <div class="resource-card-header">
+                                <div class="resource-card-icon">
+                                    <i class="bi bi-chat-dots"></i>
+                                </div>
+
+                                <h3 class="resource-card-title">
+                                    Chat med ekspert
+                                </h3>
+                            </div>
+
+                            <p class="resource-card-text">
+                                Online chat om nikotinstop
+                            </p>
+
+                            <p class="resource-card-action">
+                                stoplinjen.dk/chat
+                            </p>
+
+                            <p class="resource-card-meta">
+                                Mandag-Fredag 10-16
+                            </p>
+
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Digitale værktøjer -->
+        <section class="resources-section">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Digitale værktøjer</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Digitale hjælpemidler, der kan støtte dig i dit nikotinstop og hjælpe dig med at holde motivationen.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Kvit App -->
+                    <div class="col-12 col-md-4">
+                        <article class="resource-card">
+
+                            <div class="resource-card-header">
+                                <div class="resource-card-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+
+                                <h3 class="resource-card-title">
+                                    Kvit App
+                                </h3>
+                            </div>
+
+                            <p class="resource-card-text">
+                                Gratis app med daglige tips, spareberegner og motivation
+                            </p>
+
+                            <p class="resource-card-action">
+                                iOS &amp; Android
+                            </p>
+
+                        </article>
+                    </div>
+
+                    <!-- Slut med Smøger -->
+                    <div class="col-12 col-md-4">
+                        <article class="resource-card">
+
+                            <div class="resource-card-header">
+                                <div class="resource-card-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+
+                                <h3 class="resource-card-title">
+                                    Slut med Smøger
+                                </h3>
+                            </div>
+
+                            <p class="resource-card-text">
+                                Dansk app med personlig stopplan og tracking af fremskridt
+                            </p>
+
+                            <p class="resource-card-action">
+                                iOS &amp; Android
+                            </p>
+
+                        </article>
+                    </div>
+
+                    <!-- QuitNow -->
+                    <div class="col-12 col-md-4">
+                        <article class="resource-card">
+
+                            <div class="resource-card-header">
+                                <div class="resource-card-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+
+                                <h3 class="resource-card-title">
+                                    QuitNow!
+                                </h3>
+                            </div>
+
+                            <p class="resource-card-text">
+                                Internationalt anerkendt app med community og achievements
+                            </p>
+
+                            <p class="resource-card-action">
+                                iOS &amp; Android
+                            </p>
+
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Troværdige Kilder & Dokumentation -->
+        <section class="resources-section sources-section">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Troværdige kilder & dokumentation</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Al information på vores hjemmeside er baseret på dokumenteret forskning
+                    og officielle sundhedskilder.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Kilde 1 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                Afhængighed af nikotin
+                            </h3>
+                            <p class="source-card-meta">
+                                Kræftens Bekæmpelse - information om nikotinafhængighed og rygestop
+                            </p>
+                            <a href="https://www.cancer.dk/forebyg-kraeft/tobak-og-nikotin/rygestop-og-nikotinstop/afhaengighed/"
+                                class="source-card-link" target="_blank" rel="noopener">
+                                cancer.dk/…/…/afhaengighed
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- Kilde 2 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                KOL og træning
+                            </h3>
+                            <p class="source-card-meta">
+                                Lungeforeningen - personlige historier om livet med KOL
+                            </p>
+                            <a href="https://lunge.dk/gunhild-har-moderat-kol-og-traener-efter-arbejdstid/"
+                                class="source-card-link" target="_blank" rel="noopener">
+                                lunge.dk/…/traener-efter-arbejdstid
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- Kilde 3 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                Helbredsskader ved tobak og nikotin
+                            </h3>
+                            <p class="source-card-meta">
+                                Sundhedsstyrelsen - officiel information om helbredsskader
+                            </p>
+                            <a href="https://www.sst.dk/da/udgivelser/En-sund-livsstil/rygning-nikotin-og-snus"
+                                class="source-card-link" target="_blank" rel="noopener">
+                                sst.dk/…/rygning-nikotin-og-snus
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- Kilde 4 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                Nikotins fysiske og mentale skader
+                            </h3>
+                            <p class="source-card-meta">
+                                Apoteket Online - artikler om nikotinens påvirkning af krop og psyke
+                            </p>
+                            <a href="https://www.apoteket-online.dk/artikler/nikotin-giver-fysiske-og-mentale-skader"
+                                class="source-card-link" target="_blank" rel="noopener">
+                                apoteket-online.dk/…/nikotin-giver-fysiske-og-mentale-skader
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- Kilde 5 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                Rygning som kræftårsag
+                            </h3>
+                            <p class="source-card-meta">
+                                Kræftens Bekæmpelse - fakta om sammenhængen mellem rygning og kræft
+                            </p>
+                            <a href="https://www.cancer.dk/fakta-kraeft/aarsager/rygning/" class="source-card-link"
+                                target="_blank" rel="noopener">
+                                cancer.dk/…/aarsager/rygning
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- Kilde 6 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                E-cigaretter - fakta
+                            </h3>
+                            <p class="source-card-meta">
+                                Sundhedsstyrelsen - faglig information om e-cigaretter
+                            </p>
+                            <a href="https://www.sst.dk/da/aktuelt/nyheder/Forebyggelse-og-behandlende-indsatser/Tobak-og-nikotin/E-cigaretter/Fakta"
+                                class="source-card-link" target="_blank" rel="noopener">
+                                sst.dk/…/E-cigaretter/Fakta
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- Kilde 7 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                Nikotinprodukternes påvirkning af munden
+                            </h3>
+                            <p class="source-card-meta">
+                                Tandlægeforeningen - hvordan nikotinprodukter og e-cigaretter påvirker mundhulen
+                            </p>
+                            <a href="https://www.tandlaegeforeningen.dk/til-tandlaeger/til-dine-patienter/livsstil/roegfrie-nikotinprodukter-og-e-cigaretter/"
+                                class="source-card-link" target="_blank" rel="noopener">
+                                tandlaegeforeningen.dk/…/nikotinprodukter-og-e-cigaretter
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- Kilde 8 -->
+                    <div class="col-12 col-md-6">
+                        <article class="source-card">
+                            <h3 class="source-card-title">
+                                Vandpibe og tobak
+                            </h3>
+                            <p class="source-card-meta">
+                                Sundhedsstyrelsen - information om forskellige typer tobak inkl. vandpibe
+                            </p>
+                            <a href="https://www.sst.dk/da/aktuelt/nyheder/Forebyggelse-og-behandlende-indsatser/Tobak-og-nikotin/Fakta-om-tobak-og-rygning/typer-af-tobak-varer/Vandpibe"
+                                class="source-card-link" target="_blank" rel="noopener">
+                                sst.dk/…/Vandpibe
+                            </a>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Sektion: CTA Box-->
+        <section class="cta-box-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-box-inner">
+
+                        <div class="cta-box-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+
+                        <h2 class="cta-box-title">
+                            Har du brug for personlig rådgivning?
+                        </h2>
+
+                        <p class="cta-box-text">
+                            Kontakt os i dag, så hjælper vi dig med at finde de ressourcer der passer bedst til dig.
+                        </p>
+
+                        <a href="./contact.html" class="cta primary">
+                            Kontakt os
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer: sekundært indhold -->
+    <footer>
+
+        <div class="container">
+
+            <!-- Øvre footer-indhold -->
+            <div class="row justify-content-between">
+
+                <!-- Kolonne 1: Logo + tekst -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <a href="./index.html" aria-label="Gå til forsiden">
+                        <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                    </a>
+                    <p>Hjælper unge med at blive røg- og nikotinfri gennem støtte, viden og fællesskab.</p>
+                </div>
+
+                <!-- Kolonne 2 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Navigation</h3>
+                    <p><a href="./course.html">Stopforløb</a></p>
+                    <p><a href="./facts.html">Fakta &amp; viden</a></p>
+                    <p><a href="./stories.html">Unge fortæller</a></p>
+                    <p><a href="./contact.html">Kontakt</a></p>
+                </div>
+
+                <!-- Kolonne 3 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Information</h3>
+                    <p><a href="./contact.html#faq-section">FAQ</a></p>
+                    <p><a href="./resources.html">Ressourcer</a></p>
+                    <p><a href="./index.html">Forside</a></p>
+                </div>
+
+                <!-- Kolonne 4 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Find os</h3>
+                    <p>Torvet 5, 7400 Herning</p>
+                    <p>CVR: 29189919</p>
+                    <p>
+                        Tlf: <a href="tel:96287530">+45 96 28 75 30</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Skillelinje -->
+            <hr class="my-4">
+
+            <!-- Nederste footer-indhold -->
+            <div class="row align-items-center">
+
+                <!-- Venstre side -->
+                <div class="col-12 col-md-6">
+                    <p class="mb-0">
+                        ©2025 Giv Nikotinen Et Spark. Alle rettigheder forbeholdes.
+                    </p>
+                </div>
+
+                <!-- Højre side -->
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="https://www.herning.dk/om-kommunen/digitalisering-og-databeskyttelse/personoplysninger"
+                            target="_blank" rel="noopener noreferrer">
+                            Privatlivspolitik
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="https://www.herning.dk/cookies" target="_blank" rel="noopener noreferrer">
+                            Cookiepolitik
+                        </a>
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Popper.js bruges af Bootstrap til dropdowns, tooltips osv. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap’s JavaScript som styrer fx navbar og offcanvas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

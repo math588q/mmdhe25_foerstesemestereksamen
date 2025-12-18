@@ -1,0 +1,127 @@
+/* CTA - basis (bruges på tværs af hele sitet) */
+.cta {
+    display: inline-flex;                  /* Gør CTA fleksibel som inline-element */
+    align-items: center;                   /* Vertikal centrering af indhold */
+    justify-content: center;               /* Horisontal centrering af indhold */
+
+    font-family: inherit;                  /* Arver skrifttype fra forælder */
+    font-size: 20px;                       /* Standard tekststørrelse */
+    font-weight: var(--font-weight-semibold); /* Semi-bold tekst */
+    line-height: 1.2;                      /* Kompakt linjehøjde */
+
+    padding: 10px 20px;                    /* Indvendig klikflade */
+    border-radius: 10px;                   /* Afrundede hjørner */
+
+    text-decoration: none;                 /* Fjerner understregning */
+    cursor: pointer;                       /* Indikerer klikbart element */
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.20); /* Diskret skygge */
+
+    transition:                            /* Blød overgang ved interaktion */
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* CTA - primary (udfyldt) */
+.cta.primary {
+    background-color: var(--color-primary); /* Primær accentfarve */
+    color: var(--color-text);               /* Standard tekstfarve */
+    border: none;                           /* Ingen kantlinje */
+}
+
+.cta.primary:hover {
+    color: #ffffff;                        /* Hvid tekst ved hover */
+}
+
+/* CTA - secondary (outline) */
+.cta.secondary {
+    background-color: transparent;         /* Ingen baggrund */
+    color: var(--color-text);              /* Standard tekstfarve */
+    border: 3px solid var(--color-primary);/* Orange kantlinje */
+}
+
+.cta.secondary:hover {
+    color: var(--color-primary);           /* Fremhæver tekst ved hover */
+}
+
+/* CTA - navbar-variant */
+.cta-navbar {
+    font-size: var(--font-size-navbar);    /* Mindre tekststørrelse i navigation */
+    padding: 10px 20px;                    /* Matcher navbarens højde */
+    white-space: nowrap;                  /* Forhindrer linjeskift */
+}
+
+/* CTA - testimonial-variant */
+.cta-testimonial {
+    font-size: 16px;                       /* Standard CTA-størrelse */
+}
+
+/* CTA - course-variant */
+.cta-course {
+    font-size: 16px;                       /* Standard CTA-størrelse */
+}
+
+/* CTA - focus state (WCAG) */
+.cta:focus-visible {
+    outline: 2px solid var(--color-primary); /* Synlig fokusramme */
+    outline-offset: 4px;                   /* Luft mellem element og ramme */
+}
+
+/* CTA box - sektion */
+.cta-box-section {
+    background-color: transparent;         /* Arver sidens baggrund */
+}
+
+/* CTA box - selve boksen */
+.cta-box {
+    background-color: var(--color-surface); /* Lys flade */
+    border: 2px solid var(--color-primary); /* Orange kant */
+    border-radius: 16px;                   /* Bløde hjørner */
+    padding: 32px 24px;                    /* Indvendig luft */
+}
+
+/* CTA box - indre wrapper */
+.cta-box-inner {
+    max-width: 720px;                      /* Begrænser tekstbredde */
+    margin: 0 auto;                        /* Centrerer indhold */
+    text-align: center;                    /* Centreret tekst */
+
+    display: flex;                         /* Flex-layout */
+    flex-direction: column;               /* Lodret stacking */
+    align-items: center;                  /* Horisontal centrering */
+    gap: 16px;                            /* Afstand mellem elementer */
+}
+
+/* CTA box - ikon */
+.cta-box-icon i {
+    font-size: 32px;                      /* Ikonstørrelse */
+    color: var(--color-primary);          /* Primær farve */
+}
+
+/* CTA box - titel */
+.cta-box-title {
+    margin: 0;                            /* Fjerner default margin */
+    font-size: 24px;                     /* Tydelig overskrift */
+    font-weight: var(--font-weight-semibold); /* Semi-bold */
+    color: var(--color-title);           /* Titel-farve */
+}
+
+/* CTA box - brødtekst */
+.cta-box-text {
+    margin: 0;                            /* Ingen ekstra luft */
+    font-size: var(--font-size-text);    /* Standard brødtekst */
+    color: var(--color-text);            /* Tekstfarve */
+    max-width: 560px;                    /* Behagelig læsebredde */
+}
+
+/* CTA box - mobil justering */
+@media (max-width: 576px) {
+    .cta-box {
+        padding: 24px 16px;               /* Mindre padding på mobil */
+    }
+
+    .cta-box-title {
+        font-size: 20px;                  /* Mindre titel på mobil */
+    }
+}

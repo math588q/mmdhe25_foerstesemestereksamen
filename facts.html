@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Sikrer korrekt visning på mobile enheder -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Må IKKE indekseres af søgemaskiner -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
+    <title>Fakta & Viden</title>
+
+    <!-- Bootstrap CSS: bruges til grid, responsivitet og færdige UI-komponenter -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Inter font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Egen CSS: design og tilpasninger -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header: indeholder navigation og evt. hero-sektion -->
+    <header>
+
+        <!-- Hovednavigation -->
+        <nav class="navbar navbar-expand-lg fixed-top main-navbar" aria-label="Hovednavigation">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                </a>
+
+                <!-- Offcanvas-menu (mobil / tablet) -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+
+                    <!-- Header i offcanvas -->
+                    <div class="offcanvas-header">
+                        <a href="./index.html">
+                            <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                        </a>
+
+                        <!-- Luk-knap -->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Luk menu"></button>
+                    </div>
+
+                    <!-- Navigationens indhold -->
+                    <div class="offcanvas-body">
+
+                        <!-- Navigationsliste -->
+                        <ul class="navbar-nav justify-content-center flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./course.html">Stopforløb</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./facts.html">Fakta &amp; Viden</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./stories.html">Unge fortæller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Kontakt</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Call-to-action -->
+                <a href="./course.html" class="cta primary cta-navbar">Tilmeld</a>
+
+                <!-- Burger-menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Åbn menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Main: sidens primære indhold -->
+    <main id="main-content">
+
+        <!-- Sideintro / page header -->
+        <div class="page-header">
+            <h1 class="page-title">Fakta & Viden</h1>
+            <p class="page-subtitle">
+                Få den faktuelle viden om nikotin, tobak og konsekvenserne ved brug. Viden er magt, når det handler om
+                at tage informerede beslutninger om din sundhed.
+            </p>
+        </div>
+
+        <!-- Sektion: Om nikotin -->
+        <section class="facts-section">
+
+            <div class="container">
+
+                <!-- Sektion titel -->
+                <h2 class="section-title">Om nikotin</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Lær hvad nikotin er, og hvordan det påvirker hjernen og kroppen.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Fact 1 -->
+                    <div class="col-12 col-md-4">
+                        <article class="fact-card">
+
+                            <div class="fact-card-icon">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+
+                            <h3 class="fact-card-title">
+                                Hvad er nikotin?
+                            </h3>
+
+                            <p class="fact-card-text">
+                                Nikotin er et stærkt afhængighedsskabende stof,
+                                som findes naturligt i tobaksplanter.
+                                Det påvirker hjernen ved at frigive dopamin,
+                                hvilket skaber en følelse af belønning og velvære.
+                            </p>
+
+                            <a href="https://www.cancer.dk" class="fact-card-source" target="_blank" rel="noopener">
+                                Kilde: Kræftens Bekæmpelse
+                            </a>
+
+                        </article>
+                    </div>
+
+                    <!-- Fact 2 -->
+                    <div class="col-12 col-md-4">
+                        <article class="fact-card">
+
+                            <div class="fact-card-icon">
+                                <i class="bi bi-activity"></i>
+                            </div>
+
+                            <h3 class="fact-card-title">
+                                Hvordan virker det?
+                            </h3>
+
+                            <p class="fact-card-text">
+                                Nikotin når hjernen få sekunder efter indtagelse.
+                                Det aktiverer hjernens belønningssystem
+                                og kan føre til afhængighed.
+                                Over tid har kroppen brug for mere nikotin
+                                for at opnå samme effekt.
+                            </p>
+
+                            <a href="https://www.cancer.dk" class="fact-card-source" target="_blank" rel="noopener">
+                                Kilde: Kræftens Bekæmpelse
+                            </a>
+
+                        </article>
+                    </div>
+
+                    <!-- Fact 3 -->
+                    <div class="col-12 col-md-4">
+                        <article class="fact-card">
+
+                            <div class="fact-card-icon">
+                                <i class="bi bi-exclamation-triangle"></i>
+                            </div>
+
+                            <h3 class="fact-card-title">
+                                Hvor hurtigt bliver man afhængig?
+                            </h3>
+
+                            <p class="fact-card-text">
+                                Afhængighed kan opstå meget hurtigt -
+                                i nogle tilfælde allerede efter få ugers brug.
+                                Unge er særligt sårbare, da hjernen fortsat
+                                udvikler sig frem til cirka 25-årsalderen.
+                            </p>
+
+                            <a href="https://www.cancer.dk" class="fact-card-source" target="_blank" rel="noopener">
+                                Kilde: Kræftens Bekæmpelse
+                            </a>
+
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Sundhedsmæssige konsekvenser -->
+        <section class="facts-section">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">Sundhedsmæssige konsekvenser</h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Se hvordan nikotin kan påvirke både din fysiske og mentale sundhed - også på lang sigt.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Fact 4 -->
+                    <div class="col-12 col-md-4">
+                        <article class="fact-card">
+
+                            <div class="fact-card-icon">
+                                <i class="bi bi-wind"></i>
+                            </div>
+
+                            <h3 class="fact-card-title">
+                                Lunger
+                            </h3>
+
+                            <p class="fact-card-text">
+                                Nikotin og røg kan skade lungerne
+                                og øger risikoen for astma, KOL og lungekræft.
+                                E-cigaretter kan også påvirke lungerne negativt
+                                på grund af indholdet af kemikalier.
+                            </p>
+
+                            <a href="https://www.lungeforeningen.dk" class="fact-card-source" target="_blank"
+                                rel="noopener">
+                                Kilde: Lungeforeningen
+                            </a>
+
+                        </article>
+                    </div>
+
+                    <!-- Fact 5 -->
+                    <div class="col-12 col-md-4">
+                        <article class="fact-card">
+
+                            <div class="fact-card-icon">
+                                <i class="bi bi-heart"></i>
+                            </div>
+
+                            <h3 class="fact-card-title">
+                                Hjerte og kredsløb
+                            </h3>
+
+                            <p class="fact-card-text">
+                                Nikotin øger blodtrykket og pulsen,
+                                hvilket belaster hjertet.
+                                Det øger risikoen for blodpropper,
+                                hjerteanfald og slagtilfælde -
+                                også hos unge.
+                            </p>
+
+                            <a href="https://www.sst.dk" class="fact-card-source" target="_blank" rel="noopener">
+                                Kilde: Sundhedsstyrelsen
+                            </a>
+
+                        </article>
+                    </div>
+
+                    <!-- Fact 6 -->
+                    <div class="col-12 col-md-4">
+                        <article class="fact-card">
+
+                            <div class="fact-card-icon">
+                                <i class="bi bi-emoji-frown"></i>
+                            </div>
+
+                            <h3 class="fact-card-title">
+                                Hjerne og mental sundhed
+                            </h3>
+
+                            <p class="fact-card-text">
+                                Nikotinafhængighed kan påvirke koncentration,
+                                hukommelse og indlæring.
+                                Det øger også risikoen for angst,
+                                depression og andre psykiske problemer.
+                            </p>
+
+                            <a href="https://www.apoteket.dk" class="fact-card-source" target="_blank" rel="noopener">
+                                Kilde: Apoteket
+                            </a>
+
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Den økonomiske pris -->
+        <section class="economy-section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Den økonomiske pris
+                </h2>
+
+                <p class="section-subtitle">
+                    Nikotin kan hurtigt blive en dyr vane.
+                    Her er et overblik over, hvad et gennemsnitligt forbrug kan koste.
+                </p>
+
+                <div class="row align-items-center g-5">
+
+                    <!-- Illustration -->
+                    <div class="col-12 col-lg-6">
+                        <figure class="economy-illustration">
+                            <img src="./images/economy.webp"
+                                alt="Illustration der viser hvor mange penge nikotin kan koste over tid" loading="lazy">
+                        </figure>
+                    </div>
+
+                    <!-- Indhold -->
+                    <div class="col-12 col-lg-6">
+
+
+                        <!-- Facts -->
+                        <div class="row g-4 economy-stats">
+
+                            <div class="col-12 col-sm-6">
+                                <div class="economy-stat">
+                                    <span class="economy-value">50 kr</span>
+                                    <span class="economy-label">pr. dag</span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="economy-stat">
+                                    <span class="economy-value">1.500 kr</span>
+                                    <span class="economy-label">pr. måned</span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="economy-stat">
+                                    <span class="economy-value">18.000 kr</span>
+                                    <span class="economy-label">pr. år</span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="economy-stat">
+                                    <span class="economy-value">90.000 kr</span>
+                                    <span class="economy-label">på 5 år</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p class="economy-note">
+                            Baseret på gennemsnitligt forbrug.
+                            Tænk på, hvad du kunne bruge disse penge på i stedet!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Hvad sker der, når du stopper -->
+        <section class="stop-effects">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">
+                    Hvad sker der, når du stopper?
+                </h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Din krop begynder at hele med det samme.
+                    Her er nogle af de positive forandringer, du kan forvente over tid.
+                </p>
+
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">20 min</span>
+                            <h3>Puls normaliseres</h3>
+                            <p>Din puls og dit blodtryk begynder at falde til et normalt niveau.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">8 timer</span>
+                            <h3>Bedre ilt i blodet</h3>
+                            <p>Kulilten i blodet falder, og iltniveauet stiger.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">24 timer</span>
+                            <h3>Mindre risiko for hjerteanfald</h3>
+                            <p>Risikoen for hjerteanfald begynder at falde.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">2 uger</span>
+                            <h3>Bedre kondition</h3>
+                            <p>Kredsløbet forbedres, og lungefunktionen bliver stærkere.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">1 måned</span>
+                            <h3>Mindre hoste</h3>
+                            <p>Hoste og åndenød mindskes. Lungerne renser sig selv bedre.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">1 år</span>
+                            <h3>Halv risiko for hjertesygdom</h3>
+                            <p>Din risiko for hjertesygdom er nu halveret.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">5 år</span>
+                            <h3>Meget lavere kræftrisiko</h3>
+                            <p>Risikoen for flere kræftformer er markant reduceret.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="effect-card">
+                            <span class="effect-time">10 år</span>
+                            <h3>Som nikotinfri</h3>
+                            <p>Risikoen for lungekræft og andre kræftformer er nu næsten normal.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sektion: Forskellige former for nikotin -->
+        <section class="stop-effects">
+
+            <div class="container">
+
+                <!-- Sektionstitel -->
+                <h2 class="section-title">
+                    Forskellige former for nikotin
+                </h2>
+
+                <!-- Sektion undertitel -->
+                <p class="section-subtitle">
+                    Nikotin findes i flere former - men ingen af dem er uden konsekvenser for din krop og dit helbred.
+                </p>
+
+                <!-- Indhold -->
+                <div class="row g-4">
+
+                    <!-- Cigaretter -->
+                    <div class="col-12 col-md-6">
+                        <article class="nicotine-card h-100">
+
+                            <div class="nicotine-card-icon">
+                                <img src="./images/cigarettes.webp" alt="Cigaretter" loading="lazy" width="128"
+                                    height="128">
+                            </div>
+
+                            <h3 class="nicotine-card-title">
+                                Cigaretter
+                            </h3>
+
+                            <p class="nicotine-card-text">
+                                Indeholder over 7.000 kemikalier, hvoraf mindst 70 er kræftfremkaldende.
+                                Forårsager lungekræft, hjertesygdomme, KOL og mange andre sygdomme.
+                            </p>
+
+                            <p class="nicotine-card-warning">
+                                Ekstremt sundhedsskadeligt
+                            </p>
+
+                        </article>
+                    </div>
+
+                    <!-- E-cigaretter -->
+                    <div class="col-12 col-md-6">
+                        <article class="nicotine-card h-100">
+
+                            <div class="nicotine-card-icon">
+                                <img src="./images/vape.webp" alt="E-cigaretter og vapes" loading="lazy" width="128"
+                                    height="128">
+                            </div>
+
+                            <h3 class="nicotine-card-title">
+                                E-cigaretter / Vapes
+                            </h3>
+
+                            <p class="nicotine-card-text">
+                                Indeholder nikotin og kemikalier, der kan skade lungerne.
+                                Langtidseffekter er stadig ukendte og særligt risikable for unge.
+                            </p>
+
+                            <p class="nicotine-card-warning">
+                                Sundhedsskadeligt på anden måde
+                            </p>
+
+                        </article>
+                    </div>
+
+                    <!-- Snus -->
+                    <div class="col-12 col-md-6">
+                        <article class="nicotine-card h-100">
+
+                            <div class="nicotine-card-icon">
+                                <img src="./images/snus.webp" alt="Snus og nikotinposer" loading="lazy" width="128"
+                                    height="128">
+                            </div>
+
+                            <h3 class="nicotine-card-title">
+                                Snus / Nikotinposer
+                            </h3>
+
+                            <p class="nicotine-card-text">
+                                Højt nikotinindhold giver hurtig afhængighed og øger risikoen for
+                                mundkræft, tandkødssygdomme og hjerteproblemer.
+                            </p>
+
+                            <p class="nicotine-card-warning">
+                                Stærkt afhængighedsskabende
+                            </p>
+
+                        </article>
+                    </div>
+
+                    <!-- Vandpibe -->
+                    <div class="col-12 col-md-6">
+                        <article class="nicotine-card h-100">
+
+                            <div class="nicotine-card-icon">
+                                <img src="./images/shisha.webp" alt="Vandpibe" loading="lazy" width="128" height="128">
+                            </div>
+
+                            <h3 class="nicotine-card-title">
+                                Vandpibe
+                            </h3>
+
+                            <p class="nicotine-card-text">
+                                Selvom røgen filtreres gennem vand, indeholder den stadig nikotin
+                                og skadelige kemikalier. En session kan svare til mange cigaretter.
+                            </p>
+
+                            <p class="nicotine-card-warning">
+                                Mere skadeligt end mange tror
+                            </p>
+
+                        </article>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Sektion: CTA Box-->
+        <section class="cta-box-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-box-inner">
+
+                        <div class="cta-box-icon">
+                            <i class="bi bi-flag"></i>
+                        </div>
+
+                        <h2 class="cta-box-title">
+                            Klar til at tage det første skridt?
+                        </h2>
+
+                        <p class="cta-box-text">
+                            Nu hvor du kender fakta, er det måske tid til at overveje dit eget forbrug. Vi er her for at
+                            hjælpe dig hele vejen.
+                        </p>
+
+                        <a href="./course.html" class="cta primary">
+                            Start dit stopforløb
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer: sekundært indhold -->
+    <footer>
+
+        <div class="container">
+
+            <!-- Øvre footer-indhold -->
+            <div class="row justify-content-between">
+
+                <!-- Kolonne 1: Logo + tekst -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <a href="./index.html" aria-label="Gå til forsiden">
+                        <img src="./images/hk_logo.webp" alt="Herning Kommune logo">
+                    </a>
+                    <p>Hjælper unge med at blive røg- og nikotinfri gennem støtte, viden og fællesskab.</p>
+                </div>
+
+                <!-- Kolonne 2 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Navigation</h3>
+                    <p><a href="./course.html">Stopforløb</a></p>
+                    <p><a href="./facts.html">Fakta &amp; viden</a></p>
+                    <p><a href="./stories.html">Unge fortæller</a></p>
+                    <p><a href="./contact.html">Kontakt</a></p>
+                </div>
+
+                <!-- Kolonne 3 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Information</h3>
+                    <p><a href="./contact.html#faq-section">FAQ</a></p>
+                    <p><a href="./resources.html">Ressourcer</a></p>
+                    <p><a href="./index.html">Forside</a></p>
+                </div>
+
+                <!-- Kolonne 4 -->
+                <div class="col-12 col-md-6 col-lg-3 footer-column">
+                    <h3>Find os</h3>
+                    <p>Torvet 5, 7400 Herning</p>
+                    <p>CVR: 29189919</p>
+                    <p>
+                        Tlf: <a href="tel:96287530">+45 96 28 75 30</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Skillelinje -->
+            <hr class="my-4">
+
+            <!-- Nederste footer-indhold -->
+            <div class="row align-items-center">
+
+                <!-- Venstre side -->
+                <div class="col-12 col-md-6">
+                    <p class="mb-0">
+                        ©2025 Giv Nikotinen Et Spark. Alle rettigheder forbeholdes.
+                    </p>
+                </div>
+
+                <!-- Højre side -->
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="https://www.herning.dk/om-kommunen/digitalisering-og-databeskyttelse/personoplysninger"
+                            target="_blank" rel="noopener noreferrer">
+                            Privatlivspolitik
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="https://www.herning.dk/cookies" target="_blank" rel="noopener noreferrer">
+                            Cookiepolitik
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Popper.js bruges af Bootstrap til dropdowns, tooltips osv. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap’s JavaScript som styrer fx navbar og offcanvas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

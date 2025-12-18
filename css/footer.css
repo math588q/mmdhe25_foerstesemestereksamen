@@ -1,0 +1,64 @@
+/* Footer - overordnet */
+footer {
+    background-color: var(--color-navbar); /* Samme baggrundsfarve som navbar */
+    font-size: 14px;                       /* Mindre generel tekststørrelse */
+    font-weight: var(--font-weight-regular); /* Normal tekstvægt */
+    line-height: 1.6;                     /* Bedre læsbarhed */
+    border-top: 4px solid var(--color-primary); /* Visuel adskillelse fra indhold */
+    margin-top: 80px;                     /* Luft over footer */
+    padding-top: 40px;                    /* Indvendig luft øverst */
+    padding-bottom: 24px;                 /* Indvendig luft nederst */
+}
+
+/* Footer - kolonner */
+.footer-column {
+    margin-bottom: 24px;                  /* Luft mellem kolonner på mobil */
+}
+
+/* Footer - logo */
+.footer-column img {
+    display: block;                       /* Fjerner inline whitespace */
+    margin-bottom: 16px;                  /* Luft under logo */
+    width: 80px;                          /* Mindre logo-størrelse */
+    height: 36px;                         /* Bevarer proportioner */
+}
+
+/* Footer - overskrifter */
+.footer-column h3 {
+    font-size: 16px;                      /* Let fremhævet overskrift */
+    font-weight: var(--font-weight-semibold); /* Semi-bold vægt */
+    margin-bottom: 12px;                 /* Luft under overskrift */
+}
+
+/* Footer - tekst */
+.footer-column p {
+    margin-bottom: 8px;                   /* Tættere afstand mellem linjer */
+    font-size: 14px;                      /* Ens tekststørrelse i footer */
+    font-weight: var(--font-weight-regular); /* Normal vægt */
+}
+
+/* Footer - links */
+.footer-column a {
+    color: inherit;                       /* Arver tekstfarve */
+    text-decoration: none;                /* Fjerner understregning */
+}
+
+.footer-column a:hover {
+    text-decoration: underline;           /* Feedback ved hover */
+}
+
+/* Footer - skillelinje */
+footer hr {
+    border: 1px solid var(--color-primary); /* Tynd orange linje */
+}
+
+/* Footer - links i bundlinje */
+footer a {
+    text-decoration: none;                /* Fjerner understregning */
+    color: inherit;                       /* Samme farve som tekst */
+}
+
+/* Footer - link hover */
+footer a:hover {
+    text-decoration: underline;           /* Understregning ved hover */
+}

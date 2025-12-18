@@ -1,0 +1,116 @@
+/* Popup overlay */
+.popup-overlay {
+    position: fixed;                     /* Fast position i viewport */
+    inset: 0;                            /* Fylder hele skærmen */
+    display: none;                       /* Skjult som standard */
+    align-items: flex-start;             /* Starter øverst */
+    justify-content: center;              /* Centrerer popup horisontalt */
+    padding-top: 80px;                   /* Luft under navbar */
+    background-color: rgba(0, 0, 0, 0.35); /* Let mørkt overlay */
+    backdrop-filter: blur(8px);          /* Slører baggrunden */
+    -webkit-backdrop-filter: blur(8px);  /* Safari-support */
+    z-index: 999;                        /* Ligger over øvrigt indhold */
+}
+
+/* Viser popup når target er aktiv */
+.popup-overlay:target {
+    display: flex;                       /* Aktiverer flex-layout */
+}
+
+/* Klik på baggrund lukker popup */
+.popup-backdrop {
+    position: absolute;                  /* Fylder overlay */
+    inset: 0;                            /* Dækker hele området */
+}
+
+/* Popup box */
+.popup-box {
+    position: relative;                  /* Reference for luk-knap */
+    width: 100%;                         /* Fylder tilgængelig bredde */
+    max-width: 520px;                    /* Maksimal bredde */
+    margin: 24px;                        /* Luft på små skærme */
+    background-color: var(--color-background); /* Matcher sidebaggrund */
+    border-radius: 18px;                 /* Afrundede hjørner */
+    overflow: hidden;                    /* Klipper billede korrekt */
+}
+
+/* Luk-knap */
+.popup-close {
+    position: absolute;                  /* Placering relativt til popup */
+    top: 16px;                           /* Afstand fra toppen */
+    right: 20px;                         /* Afstand fra højre */
+    font-size: 32px;                     /* Stor klikbar luk-knap */
+    line-height: 1;                      /* Tæt linjehøjde */
+    text-decoration: none;               /* Fjerner understregning */
+    color: var(--color-title);           /* Titel-farve */
+    z-index: 2;                          /* Over indhold og billede */
+}
+
+/* Popup indhold */
+.popup-content {
+    padding: 32px;                       /* Indvendig luft */
+}
+
+/* Center-variant (bekræftelse) */
+.popup-content.center {
+    text-align: center;                  /* Centrerer tekst */
+}
+
+/* Popup titel */
+.popup-content h3 {
+    margin-bottom: 12px;                 /* Luft under titel */
+    font-size: var(--font-size-subtitle);/* Undertitel-størrelse */
+    font-weight: var(--font-weight-semibold); /* Semi-bold */
+    color: var(--color-title);           /* Titel-farve */
+}
+
+/* Popup brødtekst */
+.popup-content p {
+    margin-bottom: 24px;                 /* Luft under tekst */
+    font-size: var(--font-size-text);    /* Standard tekststørrelse */
+    line-height: 1.6;                    /* God læsbarhed */
+    color: var(--color-text);            /* Brødtekstfarve */
+}
+
+/* Popup formular */
+.popup-form {
+    display: flex;                       /* Flex-layout */
+    flex-direction: column;              /* Felter lodret */
+    gap: 8px;                            /* Afstand mellem felter */
+}
+
+/* Formular label */
+.popup-form label {
+    display: flex;                       /* Flex-layout */
+    flex-direction: column;              /* Label over input */
+    font-size: 14px;                     /* Diskret label-størrelse */
+    font-weight: var(--font-weight-medium); /* Medium vægt */
+    color: var(--color-title);           /* Titel-farve */
+}
+
+/* Inputfelter */
+.popup-form input {
+    margin-top: 6px;                     /* Luft mellem label og input */
+    padding: 10px 12px;                  /* Indvendig luft */
+    border-radius: 8px;                  /* Afrundede hjørner */
+    border: 1px solid rgba(0, 0, 0, 0.2);/* Diskret kant */
+    font-size: var(--font-size-text);    /* Standard tekststørrelse */
+    font-family: var(--font-family-base);/* Matcher resten af sitet */
+}
+
+/* Input focus */
+.popup-form input:focus {
+    outline: none;                       /* Fjerner browser-outline */
+    border-color: var(--color-primary);  /* Marker aktivt felt */
+}
+
+/* CTA i fuld bredde */
+.popup-form .full-width {
+    width: 100%;                         /* Fylder hele formularens bredde */
+    margin-top: 8px;                     /* Luft over CTA */
+}
+
+/* Bekræftelses-popup */
+.popup-confirmation .popup-content {
+    padding: 40px;                       /* Ekstra luft i bekræftelse */
+}

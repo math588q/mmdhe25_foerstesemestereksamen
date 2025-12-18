@@ -1,0 +1,108 @@
+/* Navbar - overordnet styling */
+.main-navbar {
+    background-color: var(--color-navbar);        /* Navbarens baggrundsfarve */
+    border-bottom: 4px solid var(--color-primary);/* Visuel adskillelse mod indhold */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);     /* Diskret skygge under navbar */
+}
+
+/* Logo - desktop */
+.navbar-brand img {
+    display: block;                               /* Fjerner inline whitespace */
+    width: 100px;                                 /* Fast bredde for konsistens */
+    height: 45px;                                 /* Fast højde for korrekt navbar-højde */
+}
+
+/* Logo - focus state (tastaturnavigation) */
+.navbar-brand:focus-visible {
+    outline: 2px solid var(--color-primary);      /* Synlig fokusramme */
+    outline-offset: 4px;                          /* Luft mellem element og ramme */
+    border-radius: 10px;                          /* Matcher øvrige afrundinger */
+}
+
+/* Logo - offcanvas */
+.offcanvas-header img {
+    display: block;                               /* Fjerner inline whitespace */
+    width: 80px;                                  /* Mindre logo i offcanvas */
+    height: 36px;                                 /* Bevarer proportioner */
+}
+
+/* Navigationslinks - desktop */
+.navbar-nav .nav-link {
+    font-size: var(--font-size-navbar);           /* Matcher designets tekststørrelse */
+    font-weight: var(--font-weight-semibold);     /* Semi-bold tekst */
+    color: var(--color-text);                     /* Standard tekstfarve */
+    margin: 0 14px;                               /* Luft mellem menupunkter */
+    padding-bottom: 6px;                          /* Plads til underline-animation */
+    position: relative;                           /* Reference for pseudo-element */
+    text-decoration: none;                        /* Fjerner standard underline */
+}
+
+/* Underline - skjult som standard */
+.navbar-nav .nav-link::after {
+    content: "";                                  /* Tomt pseudo-element */
+    position: absolute;                           /* Positioneres relativt til linket */
+    left: 0;                                      /* Starter fra venstre kant */
+    bottom: 0;                                    /* Placeres under teksten */
+    width: 0;                                     /* Skjult i udgangspunktet */
+    height: 2px;                                  /* Tykkelse på stregen */
+    background-color: var(--color-primary);       /* Accentfarve */
+    transition: width 0.3s ease;                  /* Blød animation */
+}
+
+/* Hover - underline vises */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;                                  /* Udfolder stregen */
+}
+
+/* Aktiv side */
+.navbar-nav .nav-link.active {
+    color: var(--color-primary);                  /* Fremhæver aktiv side */
+}
+
+/* Focus state - navigationslinks */
+.navbar-nav .nav-link:focus-visible {
+    outline: 2px solid var(--color-primary);      /* Synlig fokusramme */
+    outline-offset: 4px;                          /* Luft mellem tekst og ramme */
+    border-radius: 10px;                          /* Matcher øvrige focus states */
+}
+
+/* Offcanvas - mobil og tablet */
+@media (max-width: 992px) {
+
+    /* Offcanvas container */
+    .offcanvas {
+        background-color: var(--color-navbar);    /* Matcher navbarens baggrund */
+        width: 85vw;                               /* Fylder 85% af viewport */
+        max-width: 360px;                          /* Begrænser bredden */
+    }
+
+    /* Offcanvas header */
+    .offcanvas-header {
+        padding: 16px 20px;                        /* Luft omkring indhold */
+        border-bottom: 4px solid var(--color-primary); /* Samme accentlinje */
+    }
+
+    /* Navigationsliste i offcanvas */
+    .offcanvas .navbar-nav {
+        margin-top: 32px;                          /* Luft under header */
+        align-items: flex-start;                   /* Venstrejusteret layout */
+    }
+
+    /* Links i offcanvas */
+    .offcanvas .nav-link {
+        font-size: 18px;                           /* Større tekst til touch */
+        font-weight: var(--font-weight-semibold); /* Samme vægt som desktop */
+        padding: 14px 0;                           /* Stor klikflade */
+        margin: 0;                                 /* Fjerner desktop-margins */
+    }
+
+    /* Fjerner underline-effekt i offcanvas */
+    .offcanvas .nav-link::after {
+        display: none;                             /* Hover irrelevant på touch */
+    }
+
+    /* Aktiv side i offcanvas */
+    .offcanvas .nav-link.active {
+        color: var(--color-primary);               /* Orange aktiv farve */
+    }
+}
